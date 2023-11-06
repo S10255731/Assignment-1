@@ -59,6 +59,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Media
 - All photos used in this site were obtained from [The Official Dota2 website](https://en.wikipedia.org/wiki/Z)
+- Thumbnails for the update posts were edited with [Cleanuo.pictures](https://cleanup.pictures/)
 - Icons were obtained from [Coolicons](https://www.figma.com/community/file/800815864899415771/coolicons-free-iconset) and [Iconly 2](https://www.figma.com/community/file/996610000954670629)
 
 ### Acknowledgements
