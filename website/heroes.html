@@ -8,14 +8,14 @@
 </head>
 <body>
     <header>
-       <img src="assets/icons/dota2_logo.png" class = logo>
+        <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
        <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
         <nav>
             <ul>
-                <li><img src="assets/icons/user_icon.png" class = imga><a href = "#heroes">Heroes</a></li>
-                <li><img src="assets/icons/info_icon.png" class = imga><a href = "#armory">Armory</a></li>
-                <li><img src="assets/icons/paper_icon.png" class = imga><a href = "#guides">Guides</a></li>
-                <li><img src="assets/icons/home_icon.png" class = imga><a href = "#community">Community</a></li>
+                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html">Heroes</a></li>
+                <li><img src="assets/icons/info_icon.png" class = imga><a href = "#">Armory</a></li>
+                <li><img src="assets/icons/paper_icon.png" class = imga><a href = "#">Guides</a></li>
+                <li><img src="assets/icons/home_icon.png" class = imga><a href = "#">Community</a></li>
             </ul>
         </nav>
         <label for="nav-toggle" class = "nav-toggle-label">
@@ -23,14 +23,33 @@
         </label>
     </header>
 
-    <div class = "content">
-        <section class = "dashboard">
-            <img src="assets/background/radiant_dire.png" class = "background_img"/> 
-            <label class = "title">Welcome To The Official <span style="color: #BB242A;">Dota2</span> Wiki!</label>
-            <label class = "subtitle">The official wiki for Dota2, a multiplayer online battle arena<br/>game by Valve</label>
+    <main>
+        <section class = "other-dashboard">
+            <img src="assets/background/radiant_dire_smaller.png" class = "other-background-img"/> 
+            <label class = "side-small-title"><span style="color: #BB242A;">Dota2</span> Hero List</label>
+            <label class = "side-small-subtitle">From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory.</label>
+        </section>
+
+        <section class = "recent-patches">
+            <label class = "home-heading">Heroes</label>
+            <div class = "home-seperator"></div>
+            <div class = "home-posts-area">
+                <div class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url(./assets/thumbnails/update_1310.png);">
+                    <label>Dota 2 Update - 10/12/2023</label>
+                </div>
+                <div class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url(./assets/thumbnails/7_34d.png);">
+                    <label>7.34d Gameplay Patch</label>
+                </div>
+                <div class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url(./assets/thumbnails/7_34c.png);">
+                    <label>7.34c Gameplay Patch</label>
+                </div>
+                <div class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url(./assets/thumbnails/update_0109.png);">
+                    <label>Dota 2 Update - 9/1/2023</label>
+                </div>
+            </div>
         </section>
 
 
-    </div>
+    </main>
 </body>
 </html>
