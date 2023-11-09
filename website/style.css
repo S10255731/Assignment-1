@@ -279,4 +279,28 @@ main{
     left:10%;
     width: 55%;
 }
+.attribute-button{
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 10px;
+    border-width: 0.12vw;
+    border-style: solid;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    display: flex;
+    align-items: center;
+}
 
+.attribute-button img{
+    margin-right: 0.455vw;
+    width: 2vw;
+}
+
+.attribute-label{
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.17vw;
+}
