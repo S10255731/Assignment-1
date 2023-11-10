@@ -55,11 +55,11 @@ If this section grows too long, you may want to split it off into a separate fil
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The subtitle for the "heroes" page was obtained from [Dota2's hero page](https://www.dota2.com/heroes)
 
 ### Media
-- All photos used in this site were obtained from [The Official Dota2 website](https://en.wikipedia.org/wiki/Z)
-- Thumbnails for the update posts were edited with [Cleanuo.pictures](https://cleanup.pictures/)
+- All photos used in this site were obtained from [The Official Dota2 website](https://www.dota2.com)
+- Thumbnails for the update posts were edited with [Cleanup.pictures](https://cleanup.pictures/)
 - Icons were obtained from [Coolicons](https://www.figma.com/community/file/800815864899415771/coolicons-free-iconset) and [Iconly 2](https://www.figma.com/community/file/996610000954670629)
 
 ### Acknowledgements

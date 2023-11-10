@@ -199,7 +199,7 @@ main{
     background: #B8B8B8;
 }
 
-.home-posts-area{
+.content-area{
     position: relative;
     width: 80%;
     margin-top: 1vw;
@@ -227,10 +227,6 @@ main{
     .home-post{
         width: 48%;
     }
-}
-
-.home-post img{
-    width: 100%;
 }
 
 .home-post label{
@@ -303,4 +299,38 @@ main{
     text-align: center;
     font-weight: 400;
     font-size: 1.17vw;
+}
+
+.heroes-area{
+    position: relative;
+    width: 80%;
+    margin-top: 1vw;
+    margin-left: 10%;
+
+}
+
+.heroes{
+    display: none !important;
+    position: relative;
+    width: 15%;
+    margin-bottom: 1vw;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center; 
+    padding-top: 8.45%;
+    color: white;
+    font-weight: 500;
+    font-size: 0.85vw;
+    margin-right: 2%;
+}
+
+.heroes label{
+    position: absolute;
+    bottom: 1%;
+}
+
+.show-heroes{
+    display: flex !important;
+    justify-content: center;
+    float: left;
 }

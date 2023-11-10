@@ -4,6 +4,7 @@
 <head>
     <title>Dota2 Wiki</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
@@ -30,32 +31,71 @@
             <label class = "side-small-subtitle">From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory.</label>
         </section>
 
-        <section class = "recent-patches">
+        <section>
             <label class = "home-heading">Heroes</label>
             <div class = "home-seperator"></div>
-                <div class = "home-posts-area">
-                    <button class = "attribute-button", style="border-color: white;">
+                <div class = "content-area">
+                    <button class = "attribute-button" style="border-color: white;" onclick="filterSelection('all')">
                         <img src="assets/icons/all.png">
-                        <label, class = "attribute-label" style="color: white;">All<label>
+                        <label class = "attribute-label" style="color: white;">All<label>
                     </button>
-                    <button class = "attribute-button", style="border-color: red;">
+                    <button class = "attribute-button" style="border-color: red;" onclick="filterSelection('strength')">
                         <img src="assets/icons/strength.png">
-                        <label, class = "attribute-label", style="color: red;">Strength<label>
+                        <label class = "attribute-label" style="color: red;">Strength<label>
                     </button>
-                    <button class = "attribute-button", style="border-color: green;">
+                    <button class = "attribute-button" style="border-color: green;" onclick="filterSelection('agility')">
                         <img src="assets/icons/agility.png">
-                        <label, class = "attribute-label", style="color: green;">Agility<label>
+                        <label class = "attribute-label" style="color: green;">Agility<label>
                     </button>
-                    <button class = "attribute-button", style="border-color: #08D4EA;">
+                    <button class = "attribute-button" style="border-color: #08D4EA;" onclick="filterSelection('intelligence')">
                         <img src="assets/icons/intelligence.png">
-                        <label, class = "attribute-label", style="color: #08D4EA;">Intelligence<label>
+                        <label class = "attribute-label" style="color: #08D4EA;">Intelligence<label>
                     </button>
-                    <button class = "attribute-button", style="border-color: white">
+                    <button class = "attribute-button" style="border-color: white" onclick="filterSelection('universal')">
                         <img src="assets/icons/universal.png">
-                        <label, class = "attribute-label", style="color: white;">Universal<label>
+                        <label class = "attribute-label" style="color: white;">Universal<label>
                     </button>
+                </div>  
+                <div class = "heroes-area", style="margin-top: 5vw;">
+                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/bane.jpg);">
+                        <label>Bane</label>
+                    </a>
+                    <a href = "#" class = "heroes strength" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/chaos_knight.png);">
+                        <label>Chaos Knight</label>
+                    </a>
+                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/drow_ranger.jpg);">
+                        <label>Drow Ranger</label>
+                    </a>
+                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lina.jpg);">
+                        <label>Lina</label>
+                    </a>
+                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lion.jpg);">
+                        <label>Lion</label>
+                    </a>
+                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/muerta.jpg);">
+                        <label>Muerta</label>
+                    </a>
+                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phantom_assasin.jpg);">
+                        <label>Phantom Assasin</label>
+                    </a>
+                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phoenix.jpg);">
+                        <label>Phoenix</label>
+                    </a>
+                    <a href = "#" class = "heroes strength" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/primal_beast.png);">
+                        <label>Primal Beast</label>
+                    </a>
+                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/spectre.jpg);">
+                        <label>Spectre</label>
+                    </a>
+                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/visage.jpg);">
+                        <label>Visage</label>
+                    </a>
+                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/warlock.jpg);">
+                        <label>Warlock</label>
+                    </a>
+                    
                 </div>
-            </div>
+                
         </section>
 
 
