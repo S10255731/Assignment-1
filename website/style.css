@@ -306,22 +306,25 @@ main{
     width: 80%;
     margin-top: 1vw;
     margin-left: 10%;
+    display: grid;
+    column-gap: 2%;
+    row-gap: 1vw;
+    grid-template-columns: repeat(6, auto);
 
 }
 
 .heroes{
-    display: none !important;
+    display: none;
     position: relative;
-    width: 15%;
+    width: 100%;
     margin-bottom: 1vw;
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center; 
-    padding-top: 8.45%;
+    padding-top: 56.36%;
     color: white;
     font-weight: 500;
     font-size: 0.85vw;
-    margin-right: 2%;
 }
 
 .heroes label{
@@ -330,7 +333,6 @@ main{
 }
 
 .show-heroes{
-    display: flex !important;
+    display: flex;
     justify-content: center;
-    float: left;
 }

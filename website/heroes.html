@@ -7,7 +7,7 @@
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body>
+<body onLoad="filterSelection('all');">
     <header>
         <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
        <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
@@ -57,40 +57,40 @@
                     </button>
                 </div>  
                 <div class = "heroes-area", style="margin-top: 5vw;">
-                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/bane.jpg);">
+                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/bane.png);">
                         <label>Bane</label>
                     </a>
                     <a href = "#" class = "heroes strength" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/chaos_knight.png);">
                         <label>Chaos Knight</label>
                     </a>
-                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/drow_ranger.jpg);">
+                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/drow_ranger.png);">
                         <label>Drow Ranger</label>
                     </a>
-                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lina.jpg);">
+                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lina.png);">
                         <label>Lina</label>
                     </a>
-                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lion.jpg);">
+                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lion.png);">
                         <label>Lion</label>
                     </a>
-                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/muerta.jpg);">
+                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/muerta.png);">
                         <label>Muerta</label>
                     </a>
-                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phantom_assasin.jpg);">
-                        <label>Phantom Assasin</label>
+                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phantom_assassin.png);">
+                        <label>Phantom Assassin</label>
                     </a>
-                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phoenix.jpg);">
+                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phoenix.png);">
                         <label>Phoenix</label>
                     </a>
                     <a href = "#" class = "heroes strength" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/primal_beast.png);">
                         <label>Primal Beast</label>
                     </a>
-                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/spectre.jpg);">
+                    <a href = "#" class = "heroes agility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/spectre.png);">
                         <label>Spectre</label>
                     </a>
-                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/visage.jpg);">
+                    <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/visage.png);">
                         <label>Visage</label>
                     </a>
-                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/warlock.jpg);">
+                    <a href = "#" class = "heroes intelligence" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/warlock.png);">
                         <label>Warlock</label>
                     </a>
                     
