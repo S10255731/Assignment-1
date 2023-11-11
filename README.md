@@ -64,5 +64,8 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Acknowledgements
 
-- I received inspiration for this project from [Prydwen.gg - Honkai: Star Rail wiki and database](https://www.prydwen.gg/star-rail/), [Official dota2 website](www.dota2.com) and 
+- I received inspiration for this project from 
+    1. [Prydwen.gg - Honkai: Star Rail wiki and database](https://www.prydwen.gg/star-rail/)
+    2. [Official dota2 website](www.dota2.com) 
+    3. [David Nathaniel's Honkai Star Rail Wiki & Database](https://dribbble.com/shots/22782088-Honkai-Star-Rail-Wiki-Database) 
 - The code for the top nav bar was modified from [Kevin Powell](https://www.youtube.com/watch?v=8QKOaTYvYUA)
