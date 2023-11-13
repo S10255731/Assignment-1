@@ -343,12 +343,19 @@ main{
     width: 70%;
 }
 
+.stat-area{
+    display:flex; 
+    justify-content:space-between; 
+    width:100%;
+}
+
 .right-container{   
     width: 28%;
     border: 0.12vw solid #D9D9D9;
     padding: 0;
     border-radius: 10px;
     margin-left: auto;
+    height: max-content;
 }
 
 .right-container img{
@@ -437,7 +444,7 @@ main{
 }
 
 .inner-area-title{
-    padding-left: 1vw;
+    margin-left: 1vw;
     font-size: 1.1vw;
     color: white;
     font-weight: 600;
@@ -457,4 +464,40 @@ main{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+.attribute-row{
+    margin-top: 0.8vw;
+    margin-bottom: 0.8vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.attribute-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.attribute-img{
+    width: 70%;
+    margin-bottom: 0.5vw;
+}
+
+.attribute-column label{
+    color: white;
+    font-size: 1vw;
+}
+
+.level-row{
+    margin-left: 1vw;
+    margin-top: 1.2vw;
+    display: flex;
+    width: 38%;
+    justify-content: space-between;
+}
+
+.level-row label{
+    font-size: 1.3vw;
+    color: #909090;
 }
