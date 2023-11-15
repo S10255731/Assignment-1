@@ -4,16 +4,18 @@
 <head>
     <title>Dota2 Wiki</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="script.js"></script>
+    <script src="hero-script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body onLoad="filterSelection('all');">
+<body onLoad="load();"> <!-- Run javascript functions -->
+
+    <!-- Top Nav bar -->
     <header>
         <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
        <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
         <nav>
             <ul>
-                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html">Heroes</a></li>
+                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html" class="active">Heroes</a></li>
                 <li><img src="assets/icons/info_icon.png" class = imga><a href = "#">Armory</a></li>
                 <li><img src="assets/icons/paper_icon.png" class = imga><a href = "#">Guides</a></li>
                 <li><img src="assets/icons/home_icon.png" class = imga><a href = "#">Community</a></li>
@@ -25,6 +27,8 @@
     </header>
 
     <main>
+
+        <!-- A secondary dashboard containing a smaller image -->
         <section class = "other-dashboard">
             <img src="assets/background/radiant_dire_smaller.png" class = "other-background-img"/> 
             <label class = "side-small-title"><span style="color: #BB242A;">Dota2</span> Hero List</label>
@@ -33,9 +37,12 @@
 
         <section>
             <label class = "home-heading">Heroes</label>
-            <div class = "home-seperator"></div>
-                <div class = "content-area">
-                    <button class = "attribute-button" style="border-color: white;" onclick="filterSelection('all')">
+
+                <!-- Buttons to filter out heroes based on attribute -->
+                <div class = "content-area" id = "attribute-button-area">
+
+                    <!-- Each attribute-button has an attribute and corresponding image, triggers the sorting function when clicked -->
+                    <button class = "attribute-button active" style="border-color: white;" onclick="filterSelection('all')">
                         <img src="assets/icons/all.png">
                         <label class = "attribute-label" style="color: white;">All<label>
                     </button>
@@ -56,7 +63,10 @@
                         <label class = "attribute-label" style="color: white;">Universal<label>
                     </button>
                 </div>  
+
+                <!-- Thumbnails for each hero. Contains an image of the hero and corresponding name -->
                 <div class = "heroes-area", style="margin-top: 5vw;">
+                    <!-- Each hero display has a black gradient on the thumbnail of hero, with its name on the bottom -->
                     <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/bane.png);">
                         <label>Bane</label>
                     </a>

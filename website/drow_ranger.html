@@ -4,16 +4,16 @@
 <head>
     <title>Dota2 Wiki</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body onLoad="filterSelection('all');">
+<body>
+    <!-- Top nav bar -->
     <header>
         <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
        <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
         <nav>
             <ul>
-                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html">Heroes</a></li>
+                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html" class="active">Heroes</a></li>
                 <li><img src="assets/icons/info_icon.png" class = imga><a href = "#">Armory</a></li>
                 <li><img src="assets/icons/paper_icon.png" class = imga><a href = "#">Guides</a></li>
                 <li><img src="assets/icons/home_icon.png" class = imga><a href = "#">Community</a></li>
@@ -25,12 +25,16 @@
     </header>
 
     <main class = "flex-column hero-main">
+
+        <!-- This section contains the heroe's stats, description, name and potrait -->
         <section class = "stat-area">
             <div class = "stat-column">
                 <div class = "flex-column">
                     <div style="display: flex;">
                         <label class="hero-title">Drow Ranger</label>
+                        <!-- Hero's roles -->
                         <div class = "flex-row", style="width: 55%; margin-left: auto;">
+                            <!-- Each role container is the role of the hero in the role's corresponding colour -->
                             <div class = "roles-container" style = "border-color: #5C9DFF;">
                                 <label style = "color: #5C9DFF;">Ranged</label>
                             </div> 
@@ -47,6 +51,7 @@
                     </div>
                     <label class = "hero-description">Not many can escape Drow Ranger once she's within range. After her foes have been silenced with a chilling blast, she finishes them off with a barrage of slowing, ice-tipped arrows that few can survive.</label>
                 </div>
+                <!-- Area on the hero's attribute stats -->
                 <div class = "full-container">
                     <div class = "inner-area-top">
                         <div class = "flex-column">
@@ -54,6 +59,7 @@
                         </div>
                     </div>
                     <div class = "attribute-row">
+                        <!-- Each attribute column includes the attribute image and value -->
                         <div class = "attribute-column">
                             <img class = "attribute-img" src="assets/icons/strength.png">
                             <label>16+1.9</label> 
@@ -68,10 +74,12 @@
                         </div>
                     </div>   
                 </div>
-
+                <!-- Area for the hero's level stats -->
                 <div class = "full-container">
                     <div class = "inner-area-top">
                         <div class = "flex-column", style="width: 100%;">
+
+                            <!-- Tab bar to toggle between different hero levels -->
                             <label class = "inner-area-title">Level Stats</label>
                             <div class = "level-row">
                                 <label>0</label>
@@ -83,6 +91,7 @@
                         </div>
                     </div>
                     <div class = "levelStat-row">
+                        <!-- Each attribute column includes the level stat image, label and value -->
                         <div class = "attribute-column">
                             <div class = "img-text">
                                 <img src="assets/icons/stat_atk.png">
@@ -121,9 +130,11 @@
                     </div>   
                 </div>
             </div>
+            <!-- Area for the hero's potrait and other base stats -->
             <div class = "right-container">
                 <img src="assets/potraits/drow_ranger.png">
                 <div class = "inner-area-bottom">
+                    <!-- Label for stats -->
                     <div class = "flex-column">
                         <label class = "medium-24" style="color: #838383;">Attribute</label>
                         <label class = "medium-24" style="color: #838383;">Attack Range</label>
@@ -132,6 +143,7 @@
                         <label class = "medium-24" style="color: #838383;">Moved Speed</label>
                         <label class = "medium-24" style="color: #838383;">Vision Range</label>
                     </div>
+                    <!-- Corresponding stat values -->
                     <div class = "flex-column" style="margin-left: 10%;">
                         <label class = "medium-24" style="color: white;">Agility</label>
                         <label class = "medium-24" style="color: white;">625 (800)</label>
@@ -146,7 +158,8 @@
 
             <div>
         </section>
-
+        
+        <!-- This section shows the hero's skills -->
         <section>
             <div class = "full-container", style="margin-top: 5vw;">
                 <div class = "inner-area-top">
@@ -154,6 +167,8 @@
                         <label class = "inner-area-title">Skills</label>
                     </div>
                 </div>
+
+                <!-- skill-row contains the information for 1 skill - skill icon image, name, description and other details -->
                 <div class = "skill-row">
                     <div class = "skill-name">
                         <img src="assets/skills/drow_ranger_frost_arrows.png">
@@ -166,7 +181,8 @@
                         <label class = "skill-description-detail">Move Speed Slow: 10/25/40/55%</label>
                     </div>
                 </div>
-
+                
+                <!-- top-border class is for every row except the first one to complete the table -->
                 <div class = "skill-row skill-top-border">
                     <div class = "skill-name">
                         <img src="assets/skills/drow_ranger_wave_of_silence.png">

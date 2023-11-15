@@ -56,7 +56,11 @@ nav li{
 }
 nav a:hover {
     border-bottom: 3px solid red;
-  }
+}
+
+nav a.active {
+    border-bottom: 3px solid red;
+}
   
 nav a{
     text-decoration: none;
@@ -284,6 +288,14 @@ main{
     align-items: center;
 }
 
+.attribute-button:hover{
+    background: #FFFFFF14;
+}
+
+.attribute-button.active{
+    background: #FFFFFF14;
+}
+
 .attribute-button img{
     margin-right: 0.455vw;
     width: 2vw;
@@ -316,10 +328,16 @@ main{
     background-repeat: no-repeat;
     background-position: center center; 
     padding-top: 56.36%;
+    transition: transform .3s;
     color: white;
     font-weight: 500;
     font-size: 0.85vw;
 }
+
+.heroes:hover {
+    transform: scale(1.13); 
+    z-index: 99;
+  }
 
 .heroes label{
     position: absolute;

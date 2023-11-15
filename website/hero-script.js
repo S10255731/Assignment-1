@@ -34,4 +34,18 @@ function w3RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
+function load(){
+  filterSelection("all")
+  var btnContainer = document.getElementById("attribute-button-area");
+  var btns = btnContainer.getElementsByClassName("attribute-button");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+}
+
 
