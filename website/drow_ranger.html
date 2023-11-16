@@ -53,6 +53,7 @@
                 </div>
                 <!-- Area on the hero's attribute stats -->
                 <div class = "full-container">
+                    <!-- Title area -->
                     <div class = "inner-area-top">
                         <div class = "flex-column">
                             <label class = "inner-area-title">Attribute Stats</label>
@@ -160,65 +161,96 @@
         </section>
         
         <!-- This section shows the hero's skills -->
-        <section>
-            <div class = "full-container", style="margin-top: 5vw;">
-                <div class = "inner-area-top">
-                    <div class = "flex-column">
-                        <label class = "inner-area-title">Skills</label>
-                    </div>
+        <section class = "full-container", style="margin-top: 5vw;">
+            <!-- Title area -->
+            <div class = "inner-area-top">
+                <div class = "flex-column">
+                    <label class = "inner-area-title">Skills</label>
                 </div>
-
-                <!-- skill-row contains the information for 1 skill - skill icon image, name, description and other details -->
-                <div class = "skill-row">
-                    <div class = "skill-name">
-                        <img src="assets/skills/drow_ranger_frost_arrows.png">
-                        <label>Frost Arrows</label>
-                    </div>
-
-                    <div class = "skill-description">
-                        <label class = "skill-description-title">Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage. Slow lasts 1.5 seconds.</label>
-                        <label class = "skill-description-detail">Base Damage: 6/12/18/24</label>
-                        <label class = "skill-description-detail">Move Speed Slow: 10/25/40/55%</label>
-                    </div>
-                </div>
-                
-                <!-- top-border class is for every row except the first one to complete the table -->
-                <div class = "skill-row skill-top-border">
-                    <div class = "skill-name">
-                        <img src="assets/skills/drow_ranger_wave_of_silence.png">
-                        <label>Gust</label>
-                    </div>
-
-                    <div class = "skill-description">
-                        <label class = "skill-description-title">Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to Drow. Drow Gains Movement Speed for the same duration.</label>
-                        <label class = "skill-description-detail">Cast range: 900</label>
-                        <label class = "skill-description-detail">Effect Radius: 250</label>
-                        <label class = "skill-description-detail">Max Knockback Distance: 450</label>
-                        <label class = "skill-description-detail">Knockback Duration: 0.6/0.7/0.8/0.9</label>
-                        <label class = "skill-description-detail">Speed Bonus: 10/12/14/16%</label>
-                        <label class = "skill-description-detail">Buff/Debuff Duration: 3/4/5/6</label>
-                    </div>
-                </div>
-
-                <div class = "skill-row skill-top-border">
-                    <div class = "skill-name">
-                        <img src="assets/skills/drow_ranger_multishot.png">
-                        <label>Gust</label>
-                    </div>
-
-                    <div class = "skill-description">
-                        <label class = "skill-description-title">Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra damage and applying longer duration Frost Arrows. Lasts up to 1.75 seconds.</label>
-                        <label class = "skill-description-detail">Cast range: Global</label>
-                        <label class = "skill-description-detail">Range Multiplier: 1.8</label>
-                        <label class = "skill-description-detail">Wave Count/Arrows Per Wave: 3/4</label>
-                        <label class = "skill-description-detail">Arrow Damage Bonus: 100/120/140/160%</label>
-                        <label class = "skill-description-detail">Slow Duration: 1.3/2.0/2.8/3.5</label>
-                    </div>
-                </div>
-                
-                
             </div>
-        </section>>
+
+            <!-- skill-row contains the information for 1 skill - skill icon image, name, description and other details -->
+            <div class = "skill-row">
+                <div class = "skill-name">
+                    <img src="assets/skills/drow_ranger_frost_arrows.png">
+                    <label>Frost Arrows</label>
+                </div>
+
+                <div class = "skill-description">
+                    <label class = "skill-description-title">Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage. Slow lasts 1.5 seconds.</label>
+                    <label class = "skill-description-detail">Base Damage: 6/12/18/24</label>
+                    <label class = "skill-description-detail">Move Speed Slow: 10/25/40/55%</label>
+                </div>
+            </div>
+            
+            <!-- top-border class is for every row except the first one to complete the table -->
+            <div class = "skill-row top-border">
+                <div class = "skill-name">
+                    <img src="assets/skills/drow_ranger_wave_of_silence.png">
+                    <label>Gust</label>
+                </div>
+
+                <div class = "skill-description">
+                    <label class = "skill-description-title">Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to Drow. Drow Gains Movement Speed for the same duration.</label>
+                    <label class = "skill-description-detail">Cast range: 900</label>
+                    <label class = "skill-description-detail">Effect Radius: 250</label>
+                    <label class = "skill-description-detail">Max Knockback Distance: 450</label>
+                    <label class = "skill-description-detail">Knockback Duration: 0.6/0.7/0.8/0.9</label>
+                    <label class = "skill-description-detail">Speed Bonus: 10/12/14/16%</label>
+                    <label class = "skill-description-detail">Buff/Debuff Duration: 3/4/5/6</label>
+                </div>
+            </div>
+
+            <div class = "skill-row top-border">
+                <div class = "skill-name">
+                    <img src="assets/skills/drow_ranger_multishot.png">
+                    <label>Multishot</label>
+                </div>
+
+                <div class = "skill-description">
+                    <label class = "skill-description-title">Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra damage and applying longer duration Frost Arrows. Lasts up to 1.75 seconds.</label>
+                    <label class = "skill-description-detail">Cast range: Global</label>
+                    <label class = "skill-description-detail">Range Multiplier: 1.8</label>
+                    <label class = "skill-description-detail">Wave Count/Arrows Per Wave: 3/4</label>
+                    <label class = "skill-description-detail">Arrow Damage Bonus: 100/120/140/160%</label>
+                    <label class = "skill-description-detail">Slow Duration: 1.3/2.0/2.8/3.5</label>
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- This section shows the hero's talents -->
+        <section class = "full-container", style="margin-top: 5vw;">
+            <!-- Title area -->
+            <div class = "inner-area-top">
+                <div class = "flex-column">
+                    <label class = "inner-area-title">Talent</label>
+                </div>
+            </div>
+            
+            <!-- talent-row is formatted as (description | level | description) -->
+            <div class = "talent-row">
+                <label class = "talent-description">+1 Multishot Waves</label>
+                <label class = "talent-level">25</label>
+                <label class = "talent-description">+12% Marksmanship Chance</label>
+            </div>
+            <!-- top-border class is for every row except the first one to complete the table -->
+            <div class = "talent-row top-border">
+                <label class = "talent-description">-4s Gust Cooldown</label>
+                <label class = "talent-level">20</label>
+                <label class = "talent-description">+25% Multishot Cooldown</label>
+            </div>
+            <div class = "talent-row top-border">
+                <label class = "talent-description">-8s Multishot Cooldown</label>
+                <label class = "talent-level">15</label>
+                <label class = "talent-description">Gust Reveals Invisible Units</label>
+            </div>
+            <div class = "talent-row top-border">
+                <label class = "talent-description">+15 Frost Arrows icon Frost Arrow Damage</label>
+                <label class = "talent-level">10</label>
+                <label class = "talent-description">+15% Gust Self Movement Speeds</label>
+            </div>
+        </section>
     </main>
 </body>
 </html>

@@ -647,6 +647,35 @@ main{
     margin-right: 1vw;
 }
 
-.skill-top-border{
+.top-border{
     border-top: 0.12vw solid #D9D9D9
 }
+
+.talent-row{
+    display: flex;
+
+}
+
+.talent-level{
+    width: 40%;
+    border-right: 0.12vw solid #D9D9D9;
+    border-left: 0.12vw solid #D9D9D9;
+    text-align: center;
+    height: fit-content;
+    color: white;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-weight: 600;
+    font-size: 1.13vw;
+}
+
+.talent-description{
+    width: 100%;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 1.03vw;
+}
+
