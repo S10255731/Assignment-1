@@ -4,9 +4,10 @@
 <head>
     <title>Dota2 Wiki</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="hero-page-script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
-<body>
+<body onload="showLevel('load','0')">
     <!-- Top nav bar -->
     <header>
         <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
@@ -82,51 +83,71 @@
 
                             <!-- Tab bar to toggle between different hero levels -->
                             <label class = "inner-area-title">Level Stats</label>
-                            <div class = "level-row">
-                                <label>0</label>
-                                <label>1</label>
-                                <label>15</label>
-                                <label>25</label>
-                                <label>30</label>
+                            <div class = "level-row" id = "level-row">
+                                <button onclick="showLevel(event, '0')" class="active">0</button> <!--set 0 as default active-->
+                                <button onclick="showLevel(event, '1')">1</button>
+                                <button onclick="showLevel(event, '15')">15</button>
+                                <button onclick="showLevel(event, '25')">25</button>
+                                <button onclick="showLevel(event, '30')">30</button>
                             </div>
                         </div>
                     </div>
-                    <div class = "levelStat-row">
+                    <div class = "level-stat-row">
                         <!-- Each attribute column includes the level stat image, label and value -->
                         <div class = "attribute-column">
                             <div class = "img-text">
                                 <img src="assets/icons/stat_atk.png">
                                 <label>Damage</label>
                             </div>
-                            <label class = "">29-36</label>
+                            <label class = "tab-content 0">29-36</label>
+                            <label class = "tab-content 1">49-56</label>
+                            <label class = "tab-content 15">89-96</label>
+                            <label class = "tab-content 25">130-137</label>
+                            <label class = "tab-content 30">147-154</label>
                         </div> 
                         <div class = "attribute-column">
                             <div class = "img-text">
                                 <img src="assets/icons/stat_hp.png">
                                 <label>Health</label>
                             </div>
-                            <label class = "">120</label>
+                            <label class = "tab-content 0">120 (+0.25)</label>
+                            <label class = "tab-content 1">472 (+1.85)</label>
+                            <label class = "tab-content 15">1044 (+4.51)</label>
+                            <label class = "tab-content 25">1726 (+7.61)</label>
+                            <label class = "tab-content 30">1990 (+8.76)</label>
                         </div> 
                         <div class = "attribute-column">
                             <div class = "img-text">
                                 <img src="assets/icons/stat_def.png">
                                 <label>Armor</label>
                             </div>
-                            <label class = "">0</label>
+                            <label class = "tab-content 0">0</label>
+                            <label class = "tab-content 1">3.33</label>
+                            <label class = "tab-content 15">10.1</label>
+                            <label class = "tab-content 25">16.93</label>
+                            <label class = "tab-content 30">19.68</label>
                         </div> 
                         <div class = "attribute-column">
                             <div class = "img-text">
                                 <img src="assets/icons/stat_effectres.png">
                                 <label>Magic Resist</label>
                             </div>
-                            <label class = "">25%</label>
+                            <label class = "tab-content 0">25%</label>
+                            <label class = "tab-content 1">26.5%</label>
+                            <label class = "tab-content 15">28.46%</label>
+                            <label class = "tab-content 25">31.06%</label>
+                            <label class = "tab-content 30">31.96%</label>
                         </div> 
                         <div class = "attribute-column">
                             <div class = "img-text">
                                 <img src="assets/icons/stat_mana.png">
                                 <label>Mana</label>
                             </div>
-                            <label class = "">75</label>
+                            <label class = "tab-content 0">75 (+0)</label>
+                            <label class = "tab-content 1">255 (+0.75)</label>
+                            <label class = "tab-content 15">483 (+1.73)</label>
+                            <label class = "tab-content 25">16.93 (+3.03)</label>
+                            <label class = "tab-content 30">19.68 (+3.48)</label>
                         </div> 
                     </div>   
                 </div>
@@ -220,11 +241,11 @@
         </section>
 
         <!-- This section shows the hero's talents -->
-        <section class = "full-container", style="margin-top: 5vw;">
+        <section class = "full-container", style="margin-top: 5vw; margin-bottom: 3vw;">
             <!-- Title area -->
             <div class = "inner-area-top">
                 <div class = "flex-column">
-                    <label class = "inner-area-title">Talent</label>
+                    <label class = "inner-area-title">Talents</label>
                 </div>
             </div>
             
@@ -251,6 +272,7 @@
                 <label class = "talent-description">+15% Gust Self Movement Speeds</label>
             </div>
         </section>
+
     </main>
 </body>
 </html>

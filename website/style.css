@@ -566,12 +566,22 @@ main{
     justify-content: space-between;
 }
 
-.level-row label{
+.level-row button{
     font-size: 1.1vw;
     color: #9A9A9A;
+    background: none;
+    border: none;
 }
 
-.levelStat-row{
+.level-row button.active{
+   border-bottom: 0.2vw solid #C8C8C8;
+}
+
+.level-row button:hover{
+    border-bottom: 0.2vw solid #C8C8C8;
+ }
+
+.level-stat-row{
     margin-top: 1.2vw;
     margin-bottom: 1.2vw;
     display: flex;
@@ -581,6 +591,7 @@ main{
 .img-text{
     display: flex;
     align-items: center;
+    margin-bottom: 0.6vw;
 }
 
 .img-text label{
@@ -591,8 +602,10 @@ main{
 }
 
 .img-text img{
-    height: 1.6vw;
+    height: 0.9vw;
+    margin-right: 0.5vw;
 }
+
 
 .skill-row{
     display: flex;
