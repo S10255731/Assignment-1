@@ -13,6 +13,25 @@ function filterSelection(c) {
   }
 }
 
+function search() {
+  // Declare variables
+  var searchBar = document.getElementById('search-bar');
+  var input = searchBar.value.toLowerCase();
+  var area = document.getElementById("heroes-area");
+  var items = area.getElementsByClassName('heroes');
+  // Loop through all divs, hide those that dont match
+  for (var i = 0; i < items.length; i++) {
+    ele = items[i].getElementsByTagName("label")[0];
+    var value = ele.innerText;
+    if (value.toLowerCase().indexOf(input) > -1) { //check if substring
+      items[i].style.display = "";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+}
+
+
  //things to run when page loads
 function load(){
   filterSelection("all") //display all heroes

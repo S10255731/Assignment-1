@@ -55,11 +55,11 @@ nav li{
     margin-left: 1em;
 }
 nav a:hover {
-    border-bottom: 3px solid red;
+    border-bottom: 0.1953vw solid red;
 }
 
 nav a.active {
-    border-bottom: 3px solid red;
+    border-bottom: 0.1953vw solid red;
 }
   
 nav a{
@@ -273,6 +273,20 @@ main{
     left:10%;
     width: 55%;
 }
+
+.filter-area{
+    width: 80%;
+    margin-top: calc(3vw - 0.06510vw);
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.attribute-button-area{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
 .attribute-button{
     width: auto;
     height: auto;
@@ -280,13 +294,29 @@ main{
     border-radius: 10px;
     border-width: 0.12vw;
     border-style: solid;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
+    padding-top: 0.4vw;
+    padding-bottom: 0.4vw;
     display: flex;
     align-items: center;
 }
+
+#search-bar{
+    width: 40%;
+    height: 100%;
+    background: none;
+    background-image: url('assets/icons/search.png');
+    background-position: 0.65vw center;
+    border-radius: 7px;
+    background-size: auto 1.2vw;
+    background-repeat: no-repeat;
+    padding: 0.78vw 0 0.78vw 3%;
+    border: 0.12vw solid #ddd;
+    font-size: 1vw;
+    color: #838383;
+}
+
 
 .attribute-button:hover{
     background: #FFFFFF14;
@@ -297,14 +327,13 @@ main{
 }
 
 .attribute-button img{
-    margin-right: 0.455vw;
-    width: 2vw;
+    width: 1.8vw;
 }
 
 .attribute-label{
     text-align: center;
     font-weight: 400;
-    font-size: 1.17vw;
+    font-size: 1.05vw;
 }
 
 .heroes-area{
@@ -347,6 +376,31 @@ main{
 .show-heroes{
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 700px){
+    .filter-area{
+        flex-direction: column;
+    }
+
+    .attribute-button-area{
+        margin-bottom: 2vw;
+
+    }
+
+    .attribute-button{
+        border-radius: 5px;
+    }
+
+    #search-bar{
+        width: 70%;
+        border-radius: 2px;
+    }
+
+    .heroes-area{
+        grid-template-columns: repeat(5, auto);
+        width: 80%;
+    }
 }
 
 .hero-main{

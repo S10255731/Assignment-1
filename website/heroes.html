@@ -4,7 +4,7 @@
 <head>
     <title>Dota2 Wiki</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="hero-script.js"></script>
+    <script src="heroes-script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body onLoad="load();"> <!-- Run javascript functions -->
@@ -37,35 +37,33 @@
 
         <section>
             <label class = "home-heading">Heroes</label>
-
+                <div class = "filter-area">
                 <!-- Buttons to filter out heroes based on attribute -->
-                <div class = "content-area" id = "attribute-button-area">
+                    <div class = "attribute-button-area" id = "attribute-button-area">
 
-                    <!-- Each attribute-button has an attribute and corresponding image, triggers the sorting function when clicked -->
-                    <button class = "attribute-button active" style="border-color: white;" onclick="filterSelection('all')">
-                        <img src="assets/icons/all.png">
-                        <label class = "attribute-label" style="color: white;">All<label>
-                    </button>
-                    <button class = "attribute-button" style="border-color: red;" onclick="filterSelection('strength')">
-                        <img src="assets/icons/strength.png">
-                        <label class = "attribute-label" style="color: red;">Strength<label>
-                    </button>
-                    <button class = "attribute-button" style="border-color: green;" onclick="filterSelection('agility')">
-                        <img src="assets/icons/agility.png">
-                        <label class = "attribute-label" style="color: green;">Agility<label>
-                    </button>
-                    <button class = "attribute-button" style="border-color: #08D4EA;" onclick="filterSelection('intelligence')">
-                        <img src="assets/icons/intelligence.png">
-                        <label class = "attribute-label" style="color: #08D4EA;">Intelligence<label>
-                    </button>
-                    <button class = "attribute-button" style="border-color: white" onclick="filterSelection('universal')">
-                        <img src="assets/icons/universal.png">
-                        <label class = "attribute-label" style="color: white;">Universal<label>
-                    </button>
-                </div>  
+                        <!-- Each attribute-button has an attribute and corresponding image, triggers the sorting function when clicked -->
+                        <button class = "attribute-button active" style="border-color: white;" onclick="filterSelection('all')">
+                            <img src="assets/icons/all.png">
+                        </button>
+                        <button class = "attribute-button" style="border-color: red;" onclick="filterSelection('strength')">
+                            <img src="assets/icons/strength.png">
+                        </button>
+                        <button class = "attribute-button" style="border-color: green;" onclick="filterSelection('agility')">
+                            <img src="assets/icons/agility.png">
+                        </button>
+                        <button class = "attribute-button" style="border-color: #08D4EA;" onclick="filterSelection('intelligence')">
+                            <img src="assets/icons/intelligence.png">
+                        </button>
+                        <button class = "attribute-button" style="border-color: white" onclick="filterSelection('universal')">
+                            <img src="assets/icons/universal.png">
+                        </button>
+                    </div>  
+                    <!-- Search bar -->
+                    <input type="text" id="search-bar" onkeyup="search()" placeholder="Search for heroes.." title="Type in a name">
 
+                </div>
                 <!-- Thumbnails for each hero. Contains an image of the hero and corresponding name -->
-                <div class = "heroes-area", style="margin-top: 5vw;">
+                <div class = "heroes-area" id = "heroes-area" style="margin-top: 5vw;">
                     <!-- Each hero display has a black gradient on the thumbnail of hero, with its name on the bottom -->
                     <a href = "#" class = "heroes universal" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/bane.png);">
                         <label>Bane</label>
