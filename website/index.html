@@ -28,7 +28,10 @@
     <main>
         <!-- Dashboard area. Contains background image and introductory text -->
         <section class = "dashboard">
-            <img src="assets/background/radiant_dire.png" class = "home-background-img"/> 
+            <picture>
+                <source media="(max-width: 700px)" srcset="assets/background/radiant_dire_mobile.png">
+                <img src="assets/background/radiant_dire.png" class = "home-background-img"/> 
+            </picture>
             <label class = "title">Welcome To The <span style="color: #BB242A;">Dota2</span> Wiki!</label>
             <label class = "subtitle">The official wiki for Dota2, a multiplayer online battle arena<br/>game by Valve</label>
         </section>

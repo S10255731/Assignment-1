@@ -15,8 +15,8 @@ header{
     left:0;
     background-color: #1C1D21;
     font-weight:600;
-    font-size: 1vw;
-    height:3.9vw;
+    font-size: 3vw;
+    height:10vw;
     text-align: center;
     color:white;
     position: fixed;
@@ -98,10 +98,14 @@ nav li{
 
 .imga{
     margin-right: 5px;
-    height: 1.2vw;
+    height: 4vw;
 }
 
 @media screen and (min-width: 700px){
+    header{
+        height: 3.9vw;
+        font-size: 1vw;
+    }
     .nav-toggle-label{
         display: none;
     }
@@ -135,6 +139,10 @@ nav li{
 
     nav a{
         opacity: 1;
+    }
+
+    .imga{
+        height: 1.2vw;
     }
 
 
@@ -220,12 +228,6 @@ main{
     justify-content: center;
     align-items: center;
 }
-@media screen and (max-width: 700px){
-    .home-post{
-        width: 48%;
-        padding-top: 21.8%;
-    }
-}
 
 .home-post label{
     position: absolute; 
@@ -246,9 +248,42 @@ main{
     -webkit-mask-image: linear-gradient(rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
 }
 
+@media screen and (max-width: 700px){
+
+    .title{
+        font-size: 4.5vw;
+        width: 100%;
+        top:20%;
+    }
+    .subtitle{
+        font-size: 2.7vw;
+        width: 80%;
+        top:40%
+    }
+    .home-post{
+        width: 48%;
+        padding-top: 21.8%;
+        margin-bottom: 4vw;
+    }
+
+    .home-post label{
+        font-size: 2.3vw;
+    }
+
+    .home-heading{
+        margin-left: 5%;
+    }
+
+    .content-area{
+        margin-left: 5%;
+        width: 90%;
+    }
+}
+
 .other-dashboard{
     position: relative;
     width: 100%;
+    height: fit-content;
 }
 
 .side-small-title{
@@ -379,27 +414,64 @@ main{
 }
 
 @media screen and (max-width: 700px){
+    .side-small-title{
+        font-size: 4vw;
+        left:5%;
+        top:30%
+    }
+
+    .side-small-subtitle{
+        font-size: 2.4vw;
+        width: 80%;
+        left:5%;
+        top:45%;
+    }
+
+    .home-heading{
+        font-size: 3vw;
+        margin-left: 5%;
+    }
+
     .filter-area{
         flex-direction: column;
+        margin-left: 5%;
+        margin-top: calc(6vw - 0.0651vw);
+        margin-bottom: 10vw;
     }
 
     .attribute-button-area{
         margin-bottom: 2vw;
+        width: 90%;
 
     }
 
     .attribute-button{
-        border-radius: 5px;
+        padding: 1.2vw 1.5vw 1.2vw 1.5vw;
+
+    }
+
+    .attribute-button img{
+        width: 4vw;
     }
 
     #search-bar{
-        width: 70%;
-        border-radius: 2px;
+        width: 90%;
+        font-size: 3vw;
+        padding: 1.6vw 0 1.6vw 7vw;
+        background-size: auto 3vw;
+        background-position: 2vw center;
+        margin-top: 4vw;
     }
 
     .heroes-area{
-        grid-template-columns: repeat(5, auto);
-        width: 80%;
+        grid-template-columns: repeat(4, auto);
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 3vw;
+    }
+
+    .heroes label{
+        font-size: 2vw;
     }
 }
 
@@ -418,9 +490,7 @@ main{
 .right-container{   
     width: 28%;
     border: 0.12vw solid #D9D9D9;
-    padding: 0;
     border-radius: 10px;
-    margin-left: auto;
     height: max-content;
 }
 
@@ -438,6 +508,10 @@ main{
     background-color: #272727;
     display: flex;
     padding-bottom: 1vw;
+}
+
+.base-stats-spacing{
+    margin-left: 10%;
 }
 
 .flex-column{
@@ -473,6 +547,13 @@ main{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+.roles-row{
+    display: flex;
+    justify-content: space-between;
+    width: 55%; 
+    margin-left: auto;
 }
 
 .roles-container{
@@ -692,3 +773,147 @@ main{
     font-size: 1.03vw;
 }
 
+
+
+@media screen and (max-width: 700px){
+
+    .stat-area{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-column{
+        width: 100%;
+    }
+    
+    #hero-heading{
+        flex-direction: column;
+    }
+    .hero-title{
+        font-size: 4vw;
+    }
+
+    .roles-row{
+        margin-top: 2vw;
+        margin-left: unset;
+        margin-bottom: 3vw;
+    }
+
+    .roles-container{
+        padding: 1vw 1.3vw 1vw 1.3vw;
+    }
+
+    .roles-container label{
+        font-size: 1.9vw;
+    }
+
+    .hero-description{
+        font-size: 2.5vw;
+        margin-bottom: 5vw;
+    }
+
+    .inner-area-top{
+        padding-top: 1.3vw;
+        padding-bottom: 1.3vw;
+    }
+
+    .inner-area-title{
+        margin-left: 2vw;
+        font-size: 2.7vw;
+    }
+
+    .attribute-img{
+        width: 4.5vw;
+    }
+
+    .level-row button{
+        font-size: 2.3vw;
+    }
+
+    .img-text{
+        margin-bottom: 1.5vw;
+        margin-top: 1.2vw;
+    }
+    .img-text img{
+        height: 2vw;
+    }
+
+    .attribute-column label{
+        font-size: 2.4vw;
+    }
+
+    .full-container{
+        margin-bottom: 5vw;
+    }
+
+    .right-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-container img{
+        width: 60%;
+    }
+
+    .inner-area-bottom{
+        width: 100%;
+    }
+
+    .medium-24{
+        margin-left: 0;
+        font-size: 2.3vw;
+    }
+
+    .inner-area-bottom{
+        justify-content: space-around;
+    }
+
+    .base-stats-spacing{
+        margin-left: none;
+    }
+
+    .skill-name img{
+        width: 20%;
+        margin-right: 8%;
+        margin-left: 15%;
+        
+    }
+    
+    .skill-name label{
+        color: white;
+        font-weight: 600;
+        height: fit-content;
+        font-size: 2.7vw;
+    }
+
+    .skill-description-title{
+        font-size: 2.3vw;
+    }
+
+    .skill-description-detail{
+        font-size: 2.2vw;
+    }
+
+    .talent-description{
+        font-size: 2.2vw;
+    }
+
+    .talent-level{
+        font-size: 2.8vw;
+        height: max-content;
+    }
+
+    main{
+        top: 10vw;
+    }
+    .hero-main{
+        margin-left: 5%;
+        width: 90%;
+    }
+
+
+
+    
+}
