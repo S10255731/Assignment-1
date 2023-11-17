@@ -8,18 +8,20 @@ Currently, the [official dota2](https://www.dota2.com/home) website only contain
  
 The goal of the design was to make a minimalistic wiki with organised content. I also wanted to keep the colour scheme and design elements similar to the main website.
 
-The home page serves as the introductory page for the website. I decided to include recent game patches and upcoming content. 
+#### The home page serves as the introductory page for the website. I decided to include recent game patches and upcoming content. 
 - Since updates occur every few weeks, as a returning user, I want to quickly find any recent updates to the game so I know what is new.
 
-The heroes page is as a list of all the heroes in the game for users to navigate to. I decided on having a list of heroes as well as filters.
+##### The heroes page is as a list of all the heroes in the game for users to navigate to. I decided on having a list of heroes as well as filters.
 - As a user who is unfamiliar with the website, I want to easily be able to search and filter heroes to easily find them
 
-For the hero information page (drow ranger page), I decided on using a table-style design. This makes the content more organised.
+##### For the hero information page (drow ranger page), I decided on using a table-style design. This makes the content more organised.
 - As a user who is curious about the hero's information, I want to be able to quickly locate different sections of information in an easy-to-understand manner.
 
 
-A figma high-fidelity wireframe can be found [here](https://www.figma.com/file/z5IDi21uUzYACzDcgAW1j6/FED-S10255731-Assignment-1) or in this respository as a pdf
-The adobe XD file can also be found in this respository
+### Wireframes
+1. A figma high-fidelity wireframe can be found [here](https://www.figma.com/file/z5IDi21uUzYACzDcgAW1j6/FED-S10255731-Assignment-1) or in this respository as a pdf
+
+2. The adobe XD file can also be found in this respository
 
 ## Features
 
@@ -88,7 +90,7 @@ For any scenarios that have not been automated, test the user stories manually a
     2. In the "level stats" section, click the different numbers (representing levels)
     3. The value of the stats in that section should change accordingly
 
-#### Bugs
+### Bugs
     1. The use of @media and vw unit means that the website does not work well on old browsers. Tested with internet explorer.
     2. The website does not work well with browsers' built-in zoom feature. (It does not actually zoom in). I am unsure what the cause is, however I believe it is caused by the use of % and vw as units for almost all elements
 
