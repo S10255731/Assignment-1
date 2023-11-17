@@ -6,34 +6,47 @@ Currently, the [official dota2](https://www.dota2.com/home) website only contain
 
 ## Design Process
  
-The goal of the design was to make a minimalistic wiki with organised content. I also wanted to keep the design style similar to the main website.
+The goal of the design was to make a minimalistic wiki with organised content. I also wanted to keep the colour scheme and design elements similar to the main website.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+The home page serves as the introductory page for the website. I decided to include recent game patches and upcoming content. 
+- Since updates occur every few weeks, as a returning user, I want to quickly find any recent updates to the game so I know what is new.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
-These files should themselves either be included as a pdf file in the project itself (in an separate directory)
-Include the Adobe XD wireframe as a folder. You can include the XD share url. 
+The heroes page is as a list of all the heroes in the game for users to navigate to. I decided on having a list of heroes as well as filters.
+- As a user who is unfamiliar with the website, I want to easily be able to search and filter heroes to easily find them
+
+For the hero information page (drow ranger page), I decided on using a table-style design. This makes the content more organised.
+- As a user who is curious about the hero's information, I want to be able to quickly locate different sections of information in an easy-to-understand manner.
+
+
+A figma high-fidelity wireframe can be found [here](https://www.figma.com/file/z5IDi21uUzYACzDcgAW1j6/FED-S10255731-Assignment-1) or in this respository as a pdf
+The adobe XD file can also be found in this respository
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- Feature 1 - allows users to easily find the hero, by implementing a filter and search system
+- Feature 2 - allow users to conveniently navigate to different main sections of the website, using a top navigation bar
+- Feature 3 - allow users to view the stats for heroes at different levels, using a tab
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
 
 #### Home page
 Add new pages for the different patches
 #### Heroes Page
-Additional filter for heroes based on complexity (each hero has a complexity value from 1-3, indicating its difficulty to use)
+- Additional filter for heroes based on complexity (each hero has a complexity value from 1-3, indicating its difficulty to use)
+- Add the remaining heroes to the heros page
 
 #### Drow Ranger Page
-Add extra tabs for other hero-specific content such as guides, strategies, counters, changes, etc
+Add extra tabs for other hero-specific content such as guides, strategies and changes
+
+#### Other
+- Add a login/signup + account system to manage user previliges and ensure accountability
+- Allow users to make their own guides
+- Add the community page which includes links to other social platforms
+- Add the armory page which includes information for items and cosmetics
+- Make pages for each hero
 
 
 ## Technologies Used
@@ -76,13 +89,15 @@ For any scenarios that have not been automated, test the user stories manually a
     3. The value of the stats in that section should change accordingly
 
 #### Bugs
-    1. The use of @media and vw means that the website does not work well on old browsers. Tested with internet explorer
+    1. The use of @media and vw unit means that the website does not work well on old browsers. Tested with internet explorer.
+    2. The website does not work well with browsers' built-in zoom feature. (It does not actually zoom in). I am unsure what the cause is, however I believe it is caused by the use of % and vw as units for almost all elements
 
 
 ## Credits
 
 ### Content
 - The subtitle for the "heroes" page was obtained from [Dota2's hero page](https://www.dota2.com/heroes)
+- The content for the drow ranger page was obtained from [Dota2 Wiki Drow Ranger](https://dota2.fandom.com/wiki/Drow_Ranger)
 
 ### Media
 - All photos used in this site were obtained from [The Official Dota2 website](https://www.dota2.com)
