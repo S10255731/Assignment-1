@@ -26,7 +26,15 @@ In this section, you should go over the different parts of your project, and des
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Another feature idea
+
+#### Home page
+Add new pages for the different patches
+#### Heroes Page
+Additional filter for heroes based on complexity (each hero has a complexity value from 1-3, indicating its difficulty to use)
+
+#### Drow Ranger Page
+Add extra tabs for other hero-specific content such as guides, strategies, counters, changes, etc
+
 
 ## Technologies Used
 
@@ -46,11 +54,30 @@ For any scenarios that have not been automated, test the user stories manually a
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
     4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+1. Navigation:
+    1. Using the top navigation bar, click the "heroes" option. It should bring the user to the heroes page
+    2. Clicking the dota2 icon should bring the user to the home page
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+2. Filtering heroes
+    1. Go to the heroes page
+    2. Use the attribute buttons to filter heroes based on attributes. It should only show heroes that have said attribute
+    3. Use the search bar to search for heroes. Only heroes that match the input as a substring should show
+    4. The attribute filter should work alongside the search filter. For example, if the blue (intelligence) attribute is selected, and the character "m" is entered into the search bar, only the hero "muerta" should be shown. This is because muerta is the only intelligence hero with the letter "m" in her name
+
+3. Going to hero's page
+    1. Go to the heroes page
+    2. Click on drow ranger
+    3. It should redirect the user to the drow ranger page
+
+4. Viewing different level stats
+    1. Go to the drow ranger page
+    2. In the "level stats" section, click the different numbers (representing levels)
+    3. The value of the stats in that section should change accordingly
+
+#### Bugs
+    1. The use of @media and vw means that the website does not work well on old browsers. Tested with internet explorer
+
 
 ## Credits
 
