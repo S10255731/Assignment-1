@@ -77,7 +77,7 @@ For any scenarios that have not been automated, test the user stories manually a
 2. Filtering heroes
     1. Go to the heroes page
     2. Use the attribute buttons to filter heroes based on attributes. It should only show heroes that have said attribute
-    3. Use the search bar to search for heroes. Only heroes that match the input as a substring should show
+    3. Use the search bar to search for heroes. Only heroes that match the input substring should show
     4. The attribute filter should work alongside the search filter. For example, if the blue (intelligence) attribute is selected, and the character "m" is entered into the search bar, only the hero "muerta" should be shown. This is because muerta is the only intelligence hero with the letter "m" in her name
 
 3. Going to hero's page
