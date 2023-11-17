@@ -8,7 +8,7 @@ Currently, the [official dota2](https://www.dota2.com/home) website only contain
  
 The goal of the design was to make a minimalistic wiki with organised content. I also wanted to keep the colour scheme and design elements similar to the main website.
 
-#### The home page serves as the introductory page for the website. I decided to include recent game patches and upcoming content. 
+##### The home page serves as the introductory page for the website. I decided to include recent game patches and upcoming content. 
 - Since updates occur every few weeks, as a returning user, I want to quickly find any recent updates to the game so I know what is new.
 
 ##### The heroes page is as a list of all the heroes in the game for users to navigate to. I decided on having a list of heroes as well as filters.
