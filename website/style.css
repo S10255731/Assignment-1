@@ -317,6 +317,16 @@ main{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.role-filter-area{
+    width: 80%;
+    margin-top: calc(3vw - 0.06510vw);
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .attribute-button-area{
     display: flex;
     width: 40%;
@@ -335,6 +345,30 @@ main{
     padding-bottom: 0.4vw;
     display: flex;
     align-items: center;
+}
+
+.role-button{
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 10px;
+    border-width: 0.12vw;
+    border-style: solid;
+    padding-left: 0.9vw;
+    padding-right: 0.9vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    display: flex;
+    align-items: center;
+    font-size: 1.1vw;
+}
+
+.role-button.active{
+    background: #FFFFFF14;
+}
+
+.role-button:hover{
+    background: #FFFFFF14;
 }
 
 #search-bar{
@@ -384,7 +418,6 @@ main{
 }
 
 .heroes{
-    display: none;
     position: relative;
     width: 100%;
     margin-bottom: 1vw;
@@ -396,6 +429,7 @@ main{
     color: white;
     font-weight: 500;
     font-size: 0.85vw;
+    justify-content: center;
 }
 
 .heroes:hover {
@@ -406,11 +440,6 @@ main{
 .heroes label{
     position: absolute;
     bottom: 1%;
-}
-
-.show-heroes{
-    display: flex;
-    justify-content: center;
 }
 
 @media screen and (max-width: 700px){
@@ -436,13 +465,32 @@ main{
         flex-direction: column;
         margin-left: 5%;
         margin-top: calc(6vw - 0.0651vw);
-        margin-bottom: 10vw;
+        margin-bottom: 2vw;
+    }
+
+    .role-filter-area{
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        justify-content: unset;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .attribute-button-area{
         margin-bottom: 2vw;
         width: 90%;
+    }
 
+    .role-button{
+        font-size: 2.7vw;
+        margin-right: 4vw;
+        margin-top: 1.5vw;
+        padding-left: 1.8vw;
+        padding-right: 1.8vw;   
+        padding-top: 0.8vw;
+        padding-bottom: 0.8vw;
     }
 
     .attribute-button{
@@ -554,7 +602,10 @@ main{
     justify-content: space-between;
     width: 55%; 
     margin-left: auto;
-    flex-wrap: wrap;
+    margin-top: -1vw;
+    flex-wrap:wrap;
+    flex-direction: row-reverse;
+    
 }
 
 .roles-container{
@@ -569,6 +620,7 @@ main{
     display: flex;
     align-items: center;
     margin-left: 1%;
+    margin-top: 1vw;
 }
 
 
@@ -772,7 +824,7 @@ main{
     text-align: center;
     color: white;
     font-weight: 500;
-    font-size: 1.03vw;
+    font-size: 0.95vw;
 }
 
 
