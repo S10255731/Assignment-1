@@ -94,14 +94,19 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - The content for the drow ranger page was obtained from [Dota2 Wiki Drow Ranger](https://dota2.fandom.com/wiki/Drow_Ranger)
 
 ### Media
-- All photos used in this site were obtained from [The Official Dota2 website](https://www.dota2.com)
+- Hand of midas was obtained from [redbubble](https://www.redbubble.com/i/photographic-print/Hand-of-Midas-by-alexpng/40267233.6Q0TX)
+- Divine Rapier was obtained from [toppng](https://toppng.com/free-image/dota2-sticker-items-dota-2-divine-PNG-free-PNG-Images_210164)
+- Nurosy's profile picture was from [Dota2 wiki](https://dota2.fandom.com/wiki/Drow_Ranger/Lore#Main)
 - Thumbnails for the update posts were edited with [Cleanup.pictures](https://cleanup.pictures/)
 - Icons were obtained from [Coolicons](https://www.figma.com/community/file/800815864899415771/coolicons-free-iconset) and [Iconly 2](https://www.figma.com/community/file/996610000954670629)
+- All other photos were obtained from [Dota2 website](https://www.dota2.com)
+
 
 ### Acknowledgements
 
 - I received inspiration for this project from 
     1. [Prydwen.gg - Honkai: Star Rail wiki and database](https://www.prydwen.gg/star-rail/)
     2. [Official dota2 website](www.dota2.com) 
-    3. [David Nathaniel's Honkai Star Rail Wiki & Database](https://dribbble.com/shots/22782088-Honkai-Star-Rail-Wiki-Database) 
+    3. [David Nathaniel's Honkai Star Rail Wiki & Database](https://dribbble.com/shots/22782088-Honkai-Star-Rail-Wiki-Database)
+    4. [Genshin Impact Wiki](https://wiki.hoyolab.com/pc/genshin/home) 
 - The code for the top nav bar was modified from [Kevin Powell](https://www.youtube.com/watch?v=8QKOaTYvYUA)

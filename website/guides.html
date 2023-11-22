@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dota2 Wiki</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="heroes-script.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body onLoad="load();"> <!-- Run javascript functions -->
+
+    <!-- Top Nav bar -->
+    <header>
+        <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
+       <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
+        <nav>
+            <ul>
+                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html">Heroes</a></li>
+                <li><img src="assets/icons/info_icon.png" class = imga><a href = "#">Armory</a></li>
+                <li><img src="assets/icons/paper_icon.png" class = imga><a href = "./guides.html" class="active">Guides</a></li>
+                <li><img src="assets/icons/home_icon.png" class = imga><a href = "#">Community</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class = "nav-toggle-label">
+            <img src="assets/icons/hamburger_icon.png">
+        </label>
+    </header>
+
+    <main>
+
+        <!-- A secondary dashboard containing a smaller image -->
+        <section class = "other-dashboard">
+            <picture>
+                <source media="(max-width: 700px)" srcset="assets/background/radiant_dire_mobile.png">
+                <img src="assets/background/radiant_dire_smaller.png" class = "other-background-img"/> 
+            </picture>
+            <label class = "side-small-title", style="top:45%"><span style="color: #BB242A;">Dota2</span> Guides</label>
+            <label class = "side-small-subtitle"></label>
+        </section>
+
+        <section>
+            <label class = "home-heading">Guides</label>
+                
+                
+        </section>
+
+
+    </main>
+</body>
+</html>
