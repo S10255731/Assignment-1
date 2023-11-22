@@ -97,9 +97,10 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - Hand of midas was obtained from [redbubble](https://www.redbubble.com/i/photographic-print/Hand-of-Midas-by-alexpng/40267233.6Q0TX)
 - Divine Rapier was obtained from [toppng](https://toppng.com/free-image/dota2-sticker-items-dota-2-divine-PNG-free-PNG-Images_210164)
 - Nurosy's profile picture was from [Dota2 wiki](https://dota2.fandom.com/wiki/Drow_Ranger/Lore#Main)
-- Thumbnails for the update posts were edited with [Cleanup.pictures](https://cleanup.pictures/)
+- Clash Royale king laughing from [Know your meme](https://knowyourmeme.com/memes/clash-royale-king-laughing-he-he-he-haw)
 - Icons were obtained from [Coolicons](https://www.figma.com/community/file/800815864899415771/coolicons-free-iconset) and [Iconly 2](https://www.figma.com/community/file/996610000954670629)
 - All other photos were obtained from [Dota2 website](https://www.dota2.com)
+- Thumbnails for the update posts were edited with [Cleanup.pictures](https://cleanup.pictures/)
 
 
 ### Acknowledgements
