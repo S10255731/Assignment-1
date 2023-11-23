@@ -876,6 +876,7 @@ z-index: 99; /* Makes sure the post is on top of other posts */
 
 /* Mobile view for heroes page*/
 /* Increased font sizes */
+/* Increased spacing (margin) between containers*/
 @media screen and (max-width: 700px){
     :root{
         --heroes-margin-left: 5%; /* Change the left margin for mobile layout */ 
@@ -945,8 +946,7 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     }
 
     .heroes-area{
-        grid-template-columns: repeat(4, auto);
-        margin-left: 5%;
+        grid-template-columns: repeat(4, auto); /* Decrease to 4 heroes per row*/
         margin-top: 3vw;
     }
 
@@ -969,11 +969,11 @@ z-index: 99; /* Makes sure the post is on top of other posts */
 }
 
 .right-container{   
-    width: 28%;
+    width: 28%; /* Leave a 2% gap*/
     border: 0.12vw solid #D9D9D9;
     border-radius: 10px;
-    height: max-content;
-    margin-left: auto;
+    height: max-content; /* Make height match parent's */
+    margin-left: auto; /* Align to the right */
 }
 
 .right-container img{
@@ -983,8 +983,9 @@ z-index: 99; /* Makes sure the post is on top of other posts */
 }
 
 .inner-area-bottom{
-    border-top: 0.12vw solid #D9D9D9;
-    border-bottom-left-radius: 10px;
+    border-top: 0.12vw solid #D9D9D9; /*only the top border needs to be defined to complete the shape */
+    /* This causes only the bottom left and bottom-right borders to round to match its parent container*/
+    border-bottom-left-radius: 10px; 
     border-bottom-right-radius: 10px;
     background-color: var(--inner-area-bg);
     display: flex;
@@ -1014,10 +1015,10 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     width: 65%;
 }
 
+/* To be used with in line styling to set the text colour */
 .medium-24{
     margin-top: 1.3vw;
     margin-left: 1.4vw;
-    color: #838383;
     font-size: 0.87vw;
     font-style: normal;
     font-weight: 500;
@@ -1035,16 +1036,16 @@ z-index: 99; /* Makes sure the post is on top of other posts */
 .roles-row{
     display: flex;
     justify-content: space-between;
-    width: 55%; 
+    width: 55%; /* 55 is the default, but it is expected to be overriden by inline css depending on how many roles there are */
     margin-left: auto;
     margin-top: -1vw;
     flex-wrap:wrap;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* wrap folding to the right*/
     
 }
 
 .roles-container{
-    background: none;
+    background: none; /* transparent background */
     border-radius: 16px;
     border-width: 0.12vw;
     border-style: solid;
@@ -1053,15 +1054,14 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     padding-top: 0.5vw;
     padding-bottom: 0.5vw;
     display: flex;
-    align-items: center;
+    align-items: center; /*vertically center all children*/
     margin-left: 1%;
     margin-top: 1vw;
     
 }
 
-
 .roles-container label{
-    text-align: center;
+    text-align: center; 
     font-weight: 400;
     font-size: 0.8vw;
 }
@@ -1069,17 +1069,17 @@ z-index: 99; /* Makes sure the post is on top of other posts */
 .full-container{   
     width: 100%;
     border: 0.12vw solid #D9D9D9;
-    padding: 0;
+    padding: 0; /* override inherit padding value */
     border-radius: 10px;
     margin-left: auto;
 }
 
 .inner-area-top{
-    border-bottom: 0.12vw solid #D9D9D9;
+    border-bottom: 0.12vw solid #D9D9D9; /*only the bottom border needs to be defined to complete the shape */
+    /* This causes only the top-left and top-right borders to round to match its parent container*/
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: var(--inner-area-bg);;
-    display: flex;
+    background-color: var(--inner-area-bg);
     padding-top: 0.9vw;
     padding-bottom: 0.9vw;
 }
@@ -1108,15 +1108,18 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     margin-top: 0.8vw;
     margin-bottom: 0.8vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* A convenient way to evenly space children elements without having to worry about left/right margins*/
+    
 }
 
 .attribute-column{
+    /* Center elements in a top-down organisation*/
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .attribute-img{
     width: 2.1vw;
     margin-bottom: 0.5vw;
@@ -1131,17 +1134,19 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     margin-left: 1vw;
     margin-top: 1vw;
     display: flex;
-    width: 45%;
+    width: 45%; /* expand to slight less than half the container */
     justify-content: space-between;
 }
 
 .level-row button{
     font-size: 1.1vw;
     color: #9A9A9A;
-    background: none;
+    /* override default button properties */
+    background: none; 
     border: none;
 }
 
+/* add an underline for active and hover */
 .level-row button.active{
    border-bottom: 0.2vw solid #C8C8C8;
 }
@@ -1154,12 +1159,12 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     margin-top: 1.2vw;
     margin-bottom: 1.2vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Evenly space elements with 'dynamic' left and right margins*/
 }
 
 .img-text{
     display: flex;
-    align-items: center;
+    align-items: center; /* Container for images and text side by side, center them vertically*/
     margin-bottom: 0.6vw;
 }
 
@@ -1171,26 +1176,25 @@ z-index: 99; /* Makes sure the post is on top of other posts */
 
 .img-text img{
     height: 0.9vw;
-    margin-right: 0.5vw;
+    margin-right: 0.5vw; /* Add a space between the image and text*/
 }
 
 
+/* This is one row of the table with two columns */
 .skill-row{
-    display: flex;
-    width: 100%;
-    height: max-content;
+    display: flex; /* It uses a flex-row to place each column side by side */
+    width: 100%; /* Expand width to fill container */
 }
 
 .skill-name{
     display: flex;
-    height: auto;
-    width: 25%;
-    align-items: center;
-    border-right: 0.12vw solid #D9D9D9;
+    width: 25%; /*occupy 20% of available width space */
+    align-items: center; /* vertically center image and text children*/
+    border-right: 0.12vw solid #D9D9D9; /* right border as column divider*/
 }
 
 .skill-name img{
-    width: 20%;
+    width: 20%; 
     margin-right: 8%;
     margin-left: 15%;
     
@@ -1199,14 +1203,14 @@ z-index: 99; /* Makes sure the post is on top of other posts */
 .skill-name figcaption{
     color: white;
     font-weight: 600;
-    height: fit-content;
+    height: fit-content; /* ensure the height will never exceed max-content */
     font-size: 1.13vw;
 }
 
 .skill-description{
     display: flex;
-    flex-direction: column;
-    width: 75%;
+    flex-direction: column; /* organise content in columns */
+    width: 75%; /* occupy remaining space */
     padding-top: 2vw;
     padding-bottom: 2vw;
 }
@@ -1228,6 +1232,7 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     margin-right: 1vw;
 }
 
+/* To be used with other classes to apply a top border*/
 .top-border{
     border-top: 0.12vw solid #D9D9D9
 }
@@ -1242,13 +1247,11 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     border-right: 0.12vw solid #D9D9D9;
     border-left: 0.12vw solid #D9D9D9;
     text-align: center;
-    height: fit-content;
     color: white;
     padding-top: 1vw;
     padding-bottom: 1vw;
     font-weight: 600;
     font-size: 1.13vw;
-    height: fit-content;
 }
 
 .talent-description{
@@ -1262,20 +1265,21 @@ z-index: 99; /* Makes sure the post is on top of other posts */
 }
 
 
-
+/*mobile view for hero information page */
+/* increased text size and some margins */
 @media screen and (max-width: 700px){
 
     .stat-area{
-        flex-direction: column;
+        flex-direction: column; /* change from row to column layout. right-container will now be at the bottom instead of being at the side*/
         align-items: center;
     }
 
     .stat-column{
-        width: 100%;
+        width: 100%; /*expand text column to take up entire area */
     }
     
     #hero-heading{
-        flex-direction: column;
+        flex-direction: column; /* change to column layout so roles is below hero name */
     }
     .hero-title{
         font-size: 3.5vw;
@@ -1343,33 +1347,29 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     }
 
     .right-container{
-        width: 100%;
+        width: 100%; /* expand to take up entire width */
+        /* change to a flex and keep column organisation */
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        
+        flex-direction: column; 
+        align-items: center; /* align hero portrait to horizontal center */
     }
 
     .right-container img{
-        width: 60%;
+        width: 60%; /* can afford to take up more space */
     }
 
     .inner-area-bottom{
         width: 100%;
+        justify-content: space-around; /*use space-around for more dynamic margins and spacings */
     }
 
     .medium-24{
-        margin-left: 0;
+        margin-left: 0; /*remove margin to work with space-around justify content*/
         font-size: 2vw;
     }
 
-    .inner-area-bottom{
-        justify-content: space-around;
-    }
-
     .base-stats-spacing{
-        margin-left: 0;
+        margin-left: 0; /*remove margin to work with space-around justify content*/
     }
 
     .skill-name img{
@@ -1382,7 +1382,6 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     .skill-name figcaption{
         color: white;
         font-weight: 600;
-        height: fit-content;
         font-size: 2.3vw;
     }
 
@@ -1397,17 +1396,24 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     }
 
     .talent-description{
-        font-size: 2vw;
+        font-size: 1.9vw;
+        /* Add margins as talent-description can exceed one line*/
+        margin-left: 0.8vw;
+        margin-right: 0.8vw;
     }
 
     .talent-level{
         font-size: 2.4vw;
-        height: max-content;
+        /* In mobile view, it is possible that the talent-description is long enough to reach two rows. So, a flex box is used to ensure text is centered*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     main{
-        top: 10vw;
+        top: 10vw; /* increase starting point for all content in the page to account for nav bar's mobile height*/
     }
+    /* Change left-margin and width for all content in the page*/
     .hero-main{
         margin-left: 5%;
         width: 90%;
