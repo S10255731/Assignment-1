@@ -4,17 +4,26 @@ This website is an official wiki for Dota2. Dota2 is a multiplayer online battle
 
 Currently, the [official dota2](https://www.dota2.com/home) website only contains information about the hereoes, and the [unofficial dota2 wiki](https://dota2.fandom.com/wiki/Dota_2_Wiki) is under maintained and lacking in its user experience. This is because the unofficial wiki is built on fandom, which limits the design options. Hence, this website aims to replace the unofficial wiki and supplement the main website for in-game information. Being an official website, it is expected to be managed by Valve itself, which ensures that its content is accurate and up to date. It also comes with improvements to user-experience, such as more flexible designs and a notable lack of advertisments, which plagues the unofficial wiki.
 
+This website will be managed by both the community and the company. Users can apply to be a contributor, which gives them permission to edit articles and post guides. Moderators will be from Valve itself, making sure information is up-to-date and relevant, while guides are up to standards.
+
+## Notes for this README
+
+The three pages of drow ranger, bane and chaos knight will be categorised and referred to as the "hero information" page
+
 ## Design Process
  
-The goal of the design was to make a minimalistic wiki with organised content. I also wanted to keep the colour scheme and design elements similar to the main website.
+The goal of the design was to make a minimalistic wiki with organised content. I also wanted to keep the colour scheme and design elements similar to the main website. Despite the design of the official website and unofficial wiki, I wanted to go for a "softer look", with rounded corners, curlier fonts, etc. I found that this style of website worked best at making wikis that were both organised and aesthetic, although the inheritely dull assets of Dota2 still kept the website to a similar feel as the others. 
 
-##### The home page serves as the introductory page for the website. I decided to include recent game patches and upcoming content. 
-- Since updates occur every few weeks, as a returning user, I want to quickly find any recent updates to the game so I know what is new.
+##### The home page serves as the introductory page for the website. I decided to include recent game patches, upcoming content., recently changed pages and trending guides. The top contributor list serves as a way to recognise users who actively contribute to the website, although it is a unncessary feature and thus removed in the mobile version of the website due to its awkwardness.
+
+- As a new user, I want to know what this website is about.
+- As a returning user, I want to quickly find any recent updates to the game so I can stay up to date. I also want to know any new trends with the game.
+
 
 ##### The heroes page is as a list of all the heroes in the game for users to navigate to. I decided on having a list of heroes as well as filters.
 - As a user who is unfamiliar with the website, I want to easily be able to search and filter heroes to easily find them
 
-##### For the hero information page (drow ranger page), I decided on using a table-style design. This makes the content more organised.
+##### For the hero information page, I decided on using a table-style design. This makes the content more organised.
 - As a user who is curious about the hero's information, I want to be able to quickly locate different sections of information in an easy-to-understand manner.
 
 
@@ -35,13 +44,14 @@ The goal of the design was to make a minimalistic wiki with organised content. I
 ### Features Left to Implement
 
 #### Home page
-Add new pages for the different patches
+Add new pages for the different patches to link to
+Add scroll transitions
 #### Heroes Page
 - Additional filter for heroes based on complexity (each hero has a complexity value from 1-3, indicating its difficulty to use)
 - Add the remaining heroes to the heros page
 
-#### Drow Ranger Page
-Add extra tabs for other hero-specific content such as guides, strategies and changes
+#### Hero-information Page
+- Add extra tabs for other hero-specific content such as guides, strategies and changes
 
 #### Other
 - Add a login/signup + account system to manage user previliges and ensure accountability
@@ -51,34 +61,25 @@ Add extra tabs for other hero-specific content such as guides, strategies and ch
 - Make pages for each hero
 
 
-## Technologies Used
-
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
 
 ## Testing
 
 1. Navigation:
-    1. Using the top navigation bar, click the "heroes" option. It should bring the user to the heroes page
-    2. Clicking the dota2 icon should bring the user to the home page
+    1. For mobile only, clicking on the hamburger menu should open up a list of pages
+    2. Using the top navigation bar, click the "heroes" option. It should bring the user to the heroes page
+    3. From the heroes page, clicking on bane, chaos knight and drow ranger should direct the user to the respective hero information page
+    4. From any page, clicking the dota2 icon should bring the user to the home page
 
 
 2. Filtering heroes
     1. Go to the heroes page
     2. Use the attribute buttons to filter heroes based on attributes. It should only show heroes that have said attribute
     3. Use the search bar to search for heroes. Only heroes that match the input substring should show
-    4. The attribute filter should work alongside the search filter. For example, if the blue (intelligence) attribute is selected, and the character "m" is entered into the search bar, only the hero "muerta" should be shown. This is because muerta is the only intelligence hero with the letter "m" in her name
-
-3. Going to hero's page
-    1. Go to the heroes page
-    2. Click on drow ranger
-    3. It should redirect the user to the drow ranger page
+    4. Use the multi-select role buttons to filter heroes based on their roles. It should only show heroes that have the roles. When all buttons are unselected, all heroes should show (assuming no other filters are affecting it)
+    5. All 3 filters should work together.  Heroes shown should meet all the conditions of the role, attributes and search bar filters. For example, if intelligence (blue) attribute is selected and disabler role is selected, only intelligence heroes with a disabler role will show. 
 
 4. Viewing different level stats
-    1. Go to the drow ranger page
+    1. Go to the hero information page
     2. In the "level stats" section, click the different numbers (representing levels)
     3. The value of the stats in that section should change accordingly
 
@@ -91,7 +92,8 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ### Content
 - The subtitle for the "heroes" page was obtained from [Dota2's hero page](https://www.dota2.com/heroes)
-- The content for the drow ranger page was obtained from [Dota2 Wiki Drow Ranger](https://dota2.fandom.com/wiki/Drow_Ranger)
+- The content for the hero information page was obtained from [Dota2 Wiki Drow Ranger](https://dota2.fandom.com/wiki/Drow_Ranger), [Dota2 Wiki Bane](https://dota2.fandom.com/wiki/Bane), [Dota2 Wiki Chaos Knight](https://dota2.fandom.com/wiki/Chaos_Knight)
+
 
 ### Media
 - Hand of midas was obtained from [redbubble](https://www.redbubble.com/i/photographic-print/Hand-of-Midas-by-alexpng/40267233.6Q0TX)
