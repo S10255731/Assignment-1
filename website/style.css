@@ -3,12 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;600;700&display=swap');
 
 :root{
-    --phone: 700px;
-    --home-bg-r: 35;
+    --home-bg-r: 35; /* the background of the pages are in rgb. These 3 variables set the rgb values*/
     --home-bg-g: 39;
     --home-bg-b: 46;
-    --post-bg: #323744;
-    --home-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+    --post-bg: #323744; /* This is the background for the containers in home page*/
+    --home-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3); /* This is the drop shadow for the containters in home page*/
 }
 
 body{
@@ -22,18 +21,20 @@ body{
     background-image:  linear-gradient( rgba(var(--home-bg-r), var(--home-bg-g), var(--home-bg-b), 0.3) 30%, rgba(var(--home-bg-r), var(--home-bg-g), var(--home-bg-b), 1) 70%),   
     linear-gradient(90deg, rgba(var(--home-bg-r), var(--home-bg-g), var(--home-bg-b), 0.3) 80%, rgba(var(--home-bg-r), var(--home-bg-g), var(--home-bg-b), 1) 100%),
     linear-gradient(270deg, rgba(var(--home-bg-r), var(--home-bg-g), var(--home-bg-b), 0.3) 80%, rgba(var(--home-bg-r), var(--home-bg-g), var(--home-bg-b), 1) 100%),
-    url(./assets/background/radiant_dire.png);
+    url(./assets/background/radiant_dire.png); /* This applies 3 gradiants to the background. Left, right and bottom*/
     position: relative;
     display: flex;
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed; /* The background does not move */
+    background-size: cover; /* Make image fill the area */
+    background-repeat: no-repeat; /* Only one image will exist as the background */
 }
 
 .hero-body{
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; /* Although the background is just a gradiant, it will still repeat itself. So, dont*/
     background-attachment: fixed;
 }
+
+/* Nav bar design for mobile */
 header{
     top:0;
     left:0;
@@ -43,11 +44,11 @@ header{
     height:10vw;
     text-align: center;
     color:white;
-    position: fixed;
-    z-index: 999;
+    position: fixed; /* Scroll with user */
+    z-index: 999; /*Makes sure it stays on top of everything */
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: center; /*Vertically center elements */
     justify-content: center;
 }
 
@@ -78,10 +79,13 @@ nav li{
     margin-bottom: 1em;
     margin-left: 1em;
 }
+
+/* Some interactive effects*/
 nav a:hover {
     border-bottom: 0.1953vw solid red;
 }
 
+/* This will have to be set in the html */
 nav a.active {
     border-bottom: 0.1953vw solid red;
 }
@@ -92,10 +96,12 @@ nav a{
     opacity: 0.8;
 }
 
+/* When checkbox is enabled, show navigation options */
 .nav-toggle:checked ~ nav {
     display: block;
 }
 
+/* By default, hide navigation options */
 .nav-toggle{
     display: none;
 }
@@ -125,31 +131,35 @@ nav li{
     height: 4vw;
 }
 
+/* Styling the nav bar for desktop */
+/* 
+From testing, 700px seems to be a good point between mobile and desktop layout
+the desktop design starts falling off at this point
+*/
 @media screen and (min-width: 700px){
     header{
+        display: grid;
+        grid-template-columns:4% auto 35% 1fr 5%; /* Use grid system for nav bar */
+        grid-template-rows:100%;
         height: 3.9vw;
         font-size: 1vw;
     }
     .nav-toggle-label{
-        display: none;
+        display: none; /* Hide the hamburger menu toggle*/
     }
 
-    header{
-        display: grid;
-        grid-template-columns:4% auto 35% 1fr 5%;
-        grid-template-rows:100%;
-    }
-
+    /* Allocate different elements to their respective grid section */
     .logo{
         grid-column: 2/3;
     }
 
     nav{
-        all: unset;
+        all: unset; /* reset mobile properties*/
         grid-column: 4/5;
     }
 
     nav ul {
+        /* Uses a flexbox to align the icon with the text */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -174,8 +184,7 @@ nav li{
 }
 
 .dashboard{
-    /*background-image:  linear-gradient( rgba(var(--home-bg-r), var(--home-bg-g), var(--home-bg-b), 0.6) 0%, rgba(var(--home-bg-r), var(--home-bg-g), var(--home-bg-b), 1) 90%),   url(./assets/background/radiant_dire.png);*/
-    position: relative;
+    position: relative; /* To allow title and subtitle to position themselves based on dashboard */
     width: 100%;
     padding-top: 26.29%;
     display: flex;
@@ -230,7 +239,7 @@ main{
     padding-bottom: 1vw;
     border-radius: 10px;
     margin-bottom: 0vw;
-    box-shadow: var(--home-shadow)
+    box-shadow: var(--home-shadow) /* A box shadow helps the container stand out against the background */
 }
 
 .red-line{
@@ -253,13 +262,14 @@ main{
 
 .home-post{
     position: relative;
-    width: 32%;
+    width: 32%; /* Fit 3 posts in one row */
     border: 1px solid rgba(128, 128, 128, 0.3) ;
     margin-bottom: 1vw;
+    /* Center background image, make it fill the area*/
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center; 
-    padding-top: 14.5%;
+    padding-top: 14.5%; /* Use padding top to ensure the area size matches the image's aspect ratio*/
     color: white;
     display: flex;
     justify-content: center;
@@ -268,19 +278,21 @@ main{
     transition: transform .3s;
 }
 
-.home-post:hover {
+/* Make the post bigger on hover */
+.home-post:hover { 
 transform: scale(1.05); 
 z-index: 99;
 }
 
+/*Intended to be used with home-post to override properties */
 .home-post-small{
-    width: 48%;
+    width: 48%; /* Allow 2 posts in one row */
     padding-top: 21.75%;
 }
 
 .home-post label{
     position: absolute; 
-    bottom:45% ;
+    bottom:45% ; /* Attempt to vertically centre the text. A flex box would be better */
     font-size: 1.05vw;
     font-weight: 600;
 }
@@ -289,13 +301,6 @@ z-index: 99;
     width: 100%;
 }
 
-.other-background-img{
-    position: relative;
-    width: 100%;
-    z-index: -99;
-    mask-image: linear-gradient(rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
-    -webkit-mask-image: linear-gradient(rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
-}
 .other-content-area{
     margin-left: 10%;
     width: 80%;
@@ -306,24 +311,23 @@ z-index: 99;
 }
 
 .other-content{
-    position: relative;
     background-color: var(--post-bg);
     width: 100%;
     padding-top: 1.5vw;
     padding-bottom: 1vw;
     border-radius: 10px;
     margin-bottom: 2vw;
-    box-shadow: var(--home-shadow)
+    box-shadow: var(--home-shadow) 
 }
 
 .other-content-main{
-    width: 69%;
+    width: 69%; /* Takes up 69% of other-content-area */
     display: flex;
     flex-direction: column;
 }
 
 .other-content-side{
-    width: 29%;
+    width: 29%; /* Takes up 29% of other-content-area */
     border-radius: 10px;
     background-color: var(--post-bg);
     position: sticky;
@@ -339,7 +343,7 @@ z-index: 99;
 }
 
 .recently-updated-background{
-    position: relative;
+    position: relative; /* For child elements to use absolute postion for alignment */
     width: 48%;
     padding-top: 18.75%;
     border: 1px solid rgba(128, 128, 128, 0.3) ;
@@ -347,25 +351,26 @@ z-index: 99;
     color: white;
     border-radius: 8px;
     background-color: rgba(27, 27, 27, 0.4);
-    height:100%;
     transition: transform .3s;
 }
 
 .recently-updated-background:hover {
 transform: scale(1.05); 
-z-index: 99;
+z-index: 99; /* Makes sure the post is on top of other posts */
 }
 
+/* A column flex box to put the text */
 .left-text{
     display: flex; 
     width: 60%; 
     height: 80%;
     flex-direction: column;
-    position: absolute;
+    position: absolute; /*Uses absolute positoning to the parent flex box*/
     top: 10%;
     bottom: 10%;
 }
 
+/* A divider */
 .recently-updated-line{
     margin-left: 0.7vw;
     margin-top: 0.3vw;
@@ -385,9 +390,9 @@ z-index: 99;
 
 .right-img{
     width: 35%;
-    position: absolute;
-    top: 0%;
-    right: 0%;
+    position: absolute; /* Uses absolute positon to position*/
+    top: 0%; /* Go to top of flex box parent */
+    right: 0%; /* Go to right side of flex box parent*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -402,6 +407,12 @@ z-index: 99;
 .contributor-container{
     display: flex;
     margin-bottom: 1.5vw;
+}
+.contributor-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 .contributor-title{
     font-size: 1.2vw;
@@ -428,17 +439,18 @@ z-index: 99;
     justify-content: space-between;
 }
 
+/* Creates a circle mask over the image */
+/* Has no size by default, relies on a second class to set it */
 .profile-img{
-    border-radius: 50%;
-    width: 3.25vw;
+    border-radius: 50%; /* Makes it a circle */
     border: 0.15vw solid #C4C4C4;
-    height:3.25vw;
-    overflow: hidden;
+    overflow: hidden; /* Hide the overflow image */
+    /* Uses a flex box to center the image horizontally and vertically */
     display: flex;
     align-items: center;
     justify-content: center; 
 }
-
+/* Expands the image so it can fill the circle*/
 .profile-img img{
     width: 180%;
 }
@@ -490,9 +502,9 @@ z-index: 99;
     font-size: 1vw;
     font-weight: 600;
     margin-bottom: 0.8vw;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    overflow: hidden; /* Hide overflow text */
+    white-space: nowrap; /*Force the text into one line only */
+    text-overflow: ellipsis; /* Any overflowed text will be replaced with ellipsis */
 }
 
 .guide-description{
@@ -507,6 +519,10 @@ z-index: 99;
     
 }
 
+.guide-img-text{
+    display: flex; 
+    align-items: center;
+}
 .guide-username{
     color: #aeaeae;
     font-size: 0.8vw;
@@ -532,13 +548,14 @@ z-index: 99;
     height: 45%;
 }
 
+/* Make a gray divider */
 .guide-line{
     margin-top: 1vw;
     margin-bottom: 2vw;
     height: 0.05vw;
     background: #626262;
 }
-
+/*mobile layout for home screen */
 @media screen and (max-width: 700px){
 }
 
@@ -548,13 +565,21 @@ z-index: 99;
     height: fit-content;
 }
 
+.other-background-img{
+    position: relative; /* Set postion to relative for child elements to align to */
+    width: 100%;
+    z-index: -99; /* Make sure it stays behind other elements */
+    /* Apply a background on the img */
+    mask-image: linear-gradient(rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
+}
 .side-small-title{
     font-size: 40px;
     font-size: 1.8vw;
     font-weight: 600;
     color: white;
     text-align:center;
-    position: absolute;
+    position: absolute; /* Position absolute to other-background-img */
     top:25%;
     left:12.5%;
 }
@@ -565,7 +590,7 @@ z-index: 99;
     font-weight: 600;
     color: white;
     text-align:left;
-    position: absolute;
+    position: absolute; /* Position absolute to other-background-img */
     top: 55%;
     left:12.5%;
     width: 55%;
@@ -578,26 +603,25 @@ z-index: 99;
     font-weight: 600;
     margin-left: 10%;
     margin-left: 12.5%;
-    padding-bottom:calc(1vw - 0.06510vw);
-    border-bottom: 0.1953vw solid red;
+    padding-bottom:1vw; /* Accounts for the  */
+    border-bottom: 0.1953vw solid red; /* Add an underline/divider*/
     margin-bottom: 1vw;
 }
+
 .filter-area{
     width: 75%;
-    margin-top: calc(3vw - 0.06510vw);
+    margin-top: 3vw; 
     margin-left: 12.5%;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-between; 
 }
 
 .role-filter-area{
     width: 75%;
-    margin-top: calc(3vw - 0.06510vw);
+    margin-top: 3vw;
     margin-left: 12.5%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .attribute-button-area{
@@ -837,14 +861,16 @@ z-index: 99;
     margin-left: 10%;
 }
 
+/* A generic flex-column. Useful for many instances of organising elements and testing with in-line styles*/
 .flex-column{
     display: flex;
     flex-direction: column;
 }
 
+/* A generic, most-purpose horizontal flex box. Useful for many instances of organising elements and testing with in-line styles */
 .flex-row{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* I used space-between as I found I used it more, but there are definitely cases where I used space-around instead */
 }
 
 .stat-column{
