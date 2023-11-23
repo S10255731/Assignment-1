@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Dota2 Wiki</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body class = "home-body">
@@ -11,78 +12,79 @@
     <!-- Top Nav bar -->
 
     <header>
-        <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
+        <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png" class = logo alt = "Dota2 logo"></a>
         <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
         <nav>
             <ul>
-                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html">Heroes</a></li>
-                <li><img src="assets/icons/info_icon.png" class = imga><a href = "#">Armory</a></li>
-                <li><img src="assets/icons/paper_icon.png" class = imga><a href = "./guides.html">Guides</a></li>
-                <li><img src="assets/icons/home_icon.png" class = imga><a href = "#">Community</a></li>
+                <li><img src="assets/icons/user_icon.png" class = imga alt = "user icon"><a href = "./heroes.html">Heroes</a></li>
+                <li><img src="assets/icons/info_icon.png" class = imga alt = "info icon"><a href = "#">Armory</a></li>
+                <li><img src="assets/icons/paper_icon.png" class = imga alt = "paper icon"><a href = "#">Guides</a></li>
+                <li><img src="assets/icons/home_icon.png" class = imga alt = "home icon"><a href = "#">Community</a></li>
             </ul>
         </nav>
         <!-- replaces the checkbox with an label and a image-->
         <label for="nav-toggle" class = "nav-toggle-label">
-            <img src="assets/icons/hamburger_icon.png">
+            <img src="assets/icons/hamburger_icon.png" alt = "hamburger icon">
         </label>
     </header>
 
     <main>
         <!-- Dashboard area. Contains introductory text and a unobstructed area to view the background image-->
         <section class = "dashboard">
-            <label class = "title">Welcome To The <span style="color: #BB242A;">Dota2</span> Wiki!</label>
-            <label class = "subtitle">The official wiki for Dota2, a multiplayer online battle arena<br/>game by Valve</label>
+            <h1 class = "title">Welcome To The <mark>Dota2</mark> Wiki!</h1>
+            <h2 class = "subtitle">The official wiki for Dota2, a multiplayer online battle arena<br>game by Valve</h2>
         </section>
 
         <!-- Recent patches section, takes up the width-->
         <section class = "home-content">
-            <label class = "home-heading">Recent Patches</label>
+            <h3 class = "home-heading">Recent Patches</h3>
             <div class = "red-line"></div>
             <!-- Section for the recent patches post -->
             <!--Content area is a flex box with wrapping to put posts in-->
             <div class = "content-area">
                 <!-- Each recently updated post will contain a title on a faded thumbnail -->
-                <div class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/thumbnails/update_1310.png);">
-                    <label>Dota 2 Update - 10/12/2023</label>
-                </div>
-                <div class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/thumbnails/7_34d.png);">
-                    <label>7.34d Gameplay Patch</label>
-                </div>
-                <div class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/thumbnails/7_34c.png);">
-                    <label>7.34c Gameplay Patch</label>
-                </div>
-                <div class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/thumbnails/update_0109.png);">
-                    <label>Dota 2 Update - 9/1/2023</label>
-                </div>
+                <figure class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/thumbnails/update_1310.png);">
+                    <figcaption class = "home-post-text">Dota 2 Update - 10/12/2023</figcaption>
+                </figure>
+                <figure class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/thumbnails/7_34d.png);">
+                    <figcaption class = "home-post-text">7.34d Gameplay Patch</figcaption>
+                </figure>
+                <figure class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/thumbnails/7_34c.png);">
+                    <figcaption class = "home-post-text">7.34c Gameplay Patch</figcaption>
+                </figure>
+                <figure class = "home-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./assets/thumbnails/update_0109.png);">
+                    <figcaption class = "home-post-text">Dota 2 Update - 9/1/2023</figcaption>
+                </figure>
             </div>
         </section>
 
         <!--Content area under the recent patches section. Now has the sticky side bar for top contributors-->
         <!--Uses a column flexbox (other-content-main) within a regular flexbox (other-content-area)-->
-        <section class = "other-content-area">
+        <div class = "other-content-area">
             <!--Contains content on the left side-->
             <div class = "other-content-main" >
-                <div class = "other-content" >
-                    <!-- Section for upcoming content posts. Similar to recent patches -->
-                    <label class = "home-heading">Upcoming Content</label>
+                <!-- Section for upcoming content posts. Similar to recent patches -->
+                <section class = "other-content" >
+                    <h3 class = "home-heading">Upcoming Content</h3>
                     <div class = "red-line"></div>
-                    <div class = "content-area">
+                    <figure class = "content-area">
                         <!--Use home-post-small class to override width property from home-post, allow for 2 posts to fit per row-->
-                        <a href = "https://www.youtube.com/watch?v=n2xN0y8Z1Mo"  class = "home-post home-post-small" style="background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url(./assets/thumbnails/ringmaster.jpg);">
-                            <label>New Hero - The Ringmaster</label>
-                        </a>
-                    </div>
-                </div>
+                        <figure  class = "home-post home-post-small" style="background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url(./assets/thumbnails/ringmaster.jpg);">
+                            <a href = "https://www.youtube.com/watch?v=n2xN0y8Z1Mo"></a>
+                            <figcaption class = "home-post-text">New Hero - The Ringmaster</figcaption>
+                        </figure>
+                    </figure>
+                </section>
                 <!-- Section for recently updated-->
-                <div class = "other-content">
-                    <label class = "home-heading">Recently Updated</label>
+                <section class = "other-content">
+                    <h3 class = "home-heading">Recently Updated</h3>
                     <div class = "red-line"></div>
                     <div class = "content-area">
                         <!-- Each post is a column flex box + img within a horizontal flex box. -->
                         <div class = "recently-updated-background">
                             <!-- Column flex box. Contains all the text-->
                             <div class = "left-text">
-                                <label class = "recently-updated-title">Hand of Midas</label>
+                                <h4 class = "recently-updated-title">Hand of Midas</h4>
                                 <!--A gray line that serves as a divider between title and details-->
                                 <div class = "recently-updated-line"></div>
                                 <label class = "recently-updated-details">40 edits</label>
@@ -90,163 +92,164 @@
                             </div>
                             <!-- Left side of the horizontal flex box, contains image-->
                             <div class = "right-img">
-                                <img src="./assets/items/Hand_of_midas.png">
+                                <img src="./assets/items/Hand_of_midas.png" alt = "hand of midas">
                             </div> 
                         </div>
 
                         <div class = "recently-updated-background">
                             <div class = "left-text">
-                                <label class = "recently-updated-title">Divine Rapier</label>
+                                <h4 class = "recently-updated-title">Divine Rapier</h4>
                                 <div class = "recently-updated-line"></div>
                                 <label class = "recently-updated-details">60 edits</label>
                                 <label class = "recently-updated-details">Changes: Damage</label>
                             </div>
                             <div class = "right-img">
-                                <img src="./assets/items/divine_rapier.png">
+                                <img src="./assets/items/divine_rapier.png" alt = "divine rapier">
                             </div> 
                         </div>
 
                         
                     </div>
-                </div>
+                </section>
                 <!-- Section for trending guides-->
-                <div class = "other-content">
-                    <label class = "home-heading">Trending Guides</label>
+                <section class = "other-content">
+                    <h3 class = "home-heading">Trending Guides</h3>
                     <div class = "red-line" style = "margin-bottom:2vw;"></div>
                     <!-- Use a column flex box to list guides vertically-->
                     <div class = "guides-column">
                         <!-- Each guide is a column flex box + img within a horizontal flex box (guide-row). -->
                         <div class = "guide-row">
                             <!-- The column flex box on the left. Contains title, description and details-->
-                            <div class = "flex-column", style="width: 65%;">
-                                <label class = "guide-title">A chaotic guide to 7.34d Chaos Knight</label>
-                                <label class = "guide-description">Hi everyone, this is a comprehensive guide for Chaos Knight, probably the best carry right now. His high burst damage and sustain lets him easily dominate lane and early fights</label>
-                                <!--Details of the post (author, number of views)-->
-                                <div class="flex-row">
+                            <article class = "flex-column" style="width: 65%;">
+                                <h4 class = "guide-title">A chaotic guide to 7.34d Chaos Knight</h4>
+                                <p class = "guide-description">Hi everyone, this is a comprehensive guide for Chaos Knight, probably the best carry right now. His high burst damage and sustain lets him easily dominate lane and early fights</p>
+                                <!--other details of the post - author, number of views in one row-->
+                                <footer class="flex-row">
                                     <!--guide-img-text uses a flexbox to add an img next to text-->
                                     <div class = "guide-img-text">
                                         <!-- guide-profile is used to add a size property of profile-img -->
                                         <div class = " guide-profile profile-img">
-                                            <img src="./assets/potraits/exihs_avatar.png">
+                                            <img src="./assets/potraits/exihs_avatar.png" alt = "exihs avatar">
                                         </div>
                                         <label class = "guide-username">exihs</label>
                                     </div>
 
                                     <div class = "guide-img-text">
-                                        <img class = "guide-views-img" src="./assets/icons/views_icon.png">
+                                        <img class = "guide-views-img" src="./assets/icons/views_icon.png" alt = "views">
                                         <label class = "guide-username guide-views">1,106</label>
                                     </div>
-                                </div>
-                            </div>
+                                </footer>
+                            </article>
                             <!--Thumbnail for the post. I used in-line styles for the different aspect ratios-->
-                            <img src="assets/thumbnails/chaos_knight.png", style="width: 25%;height: 80%;"> 
+                            <img src="assets/thumbnails/chaos_knight.png" style="width: 25%;height: 80%;" alt = "chaos knight guide thumbnail"> 
                         </div> 
 
                         <!--A gray line that serves as a divider between posts-->
                         <div class = "guide-line"></div> 
 
                         <div class = "guide-row">
-                            <div class = "flex-column", style="width: 65%;">
-                                <label class = "guide-title">An in-depth guide on midas: When to buy it, how to use it, how to</label>
-                                <label class = "guide-description">The hand of midas is a trickey item for new players. While it can provide high gold value, buying it can also be a throw. This guide is to provide</label>
-                                <div class="flex-row">
+                            <article class = "flex-column" style="width: 65%;">
+                                <h4 class = "guide-title">An in-depth guide on midas: When to buy it, how to use it, how to</h4>
+                                <p class = "guide-description">The hand of midas is a trickey item for new players. While it can provide high gold value, buying it can also be a throw. This guide is to provide</p>
+                                <footer class="flex-row">
                                     <div style = "display: flex; align-items: center;">
                                         <div class = " guide-profile profile-img">
-                                            <img src="./assets/potraits/nurosy_avatar.png">
+                                            <img src="./assets/potraits/nurosy_avatar.png" alt = "nurosy avatar">
                                         </div>
                                         <label class = "guide-username">Nurosy</label>
                                     </div>
 
                                     <div style = "display: flex; align-items: center;">
-                                        <img class = "guide-views-img" src="./assets/icons/views_icon.png">
+                                        <img class = "guide-views-img" src="./assets/icons/views_icon.png" alt = "views">
                                         <label class = "guide-username guide-views">980</label>
                                     </div>
-                                </div>
-                            </div>
+                                </footer>
+                            </article>
 
-                            <img src="assets/thumbnails/midas_guide.png", style="width: 25%;height: 80%;">
+                            <img src="assets/thumbnails/midas_guide.png" style="width: 25%;height: 80%;" alt = "midas guide thumbnail">
                         </div>   
 
                         <div class = "guide-line"></div> 
 
                         <div class = "guide-row">
-                            <div class = "flex-column", style="width: 65%;">
-                                <label class = "guide-title">Why Wraith King is a top meta offlane</label>
-                                <label class = "guide-description">Wraith King has been primarly played as pos 1, but as of recently, he has seen more usage as an offlaner. He is tanky, has sustain, skeletons to farm and harass, a second life and a stun</label>
-                                <div class="flex-row">
+                            <div class = "flex-column" style="width: 65%;">
+                                <h4 class = "guide-title">Why Wraith King is a top meta offlane</h4>
+                                <p class = "guide-description">Wraith King has been primarly played as pos 1, but as of recently, he has seen more usage as an offlaner. He is tanky, has sustain, skeletons to farm and harass, a second life and a stun</p>
+                                <footer class="flex-row">
                                     <div style = "display: flex; align-items: center;">
                                         <div class = " guide-profile profile-img">
-                                            <img src="./assets/potraits/nurosy_avatar.png">
+                                            <img src="./assets/potraits/nurosy_avatar.png" alt = "nurosy avatar">
                                         </div>
                                         <label class = "guide-username">Nurosy</label>
                                     </div>
 
                                     <div style = "display: flex; align-items: center;">
-                                        <img class = "guide-views-img" src="./assets/icons/views_icon.png">
+                                        <img class = "guide-views-img" src="./assets/icons/views_icon.png" alt = "views">
                                         <label class = "guide-username guide-views">903</label>
                                     </div>
-                                </div>
+                                </footer>
                             </div>
 
-                            <img src="assets/thumbnails/wraith_king_guide.png", style="width: 25%;height: 80%;">
+                            <img src="assets/thumbnails/wraith_king_guide.png" style="width: 25%;height: 80%;" alt = "wraith king guide thumbnail">
                         </div>   
 
                         
                     </div>
-                </div>
+                </section>
             </div>
             <!-- Side bar, top contributors section-->
-            <div class = "other-content-side" >
+            <aside class = "other-content-side" >
+                <!-- used div instead of heading so that it's width fully matches the parent's width-->
                 <div class = "contributor-title">Top Contributors</div>
                 <div class = "red-line"></div>
                 <div class = "flex-column contributor-list">
-                    <!-- Each contributor is made up of their profile img + flex column (contributor-info) within a horizontal flex box (contributor-container)-->>
+                    <!-- Each contributor is made up of their profile img + flex column (contributor-info) within a horizontal flex box (contributor-container)-->
                     <div class="contributor-container">
                         <!-- Profile picture in a circle-->
                         <!-- profile-img is the mask, top-contributor-img sets the size-->
                         <div class = "top-contributor-img profile-img">
-                            <img src="./assets/potraits/manhal_IQ_avatar.png">
+                            <img src="./assets/potraits/manhal_IQ_avatar.png" alt = "manhal_IQ avatar">
                         </div>
-                        <!-- Include username + number of edits-->
+                        <!-- Include username + number of edits side by side in a flex row-->
                         <div class = "contributor-info">
-                            <label class = "contributor-name">manhal_IQ</label>
+                            <h5 class = "contributor-name">manhal_IQ</h5>
                             <label class = "contributor-edits">3405 edits</label>
                         </div>
                     </div>
 
                     <div class="contributor-container">
                         <div class = "top-contributor-img profile-img">
-                            <img src="./assets/potraits/exihs_avatar.png">
+                            <img src="./assets/potraits/exihs_avatar.png" alt = "exihs avatar">
                         </div>
                         <div class = "contributor-info">
-                            <label class = "contributor-name">exihs</label>
+                            <h5 class = "contributor-name">exihs</h5>
                             <label class = "contributor-edits">3005 edits</label>
                         </div>
                     </div>
 
                     <div class="contributor-container">
                         <div class = "top-contributor-img profile-img">
-                            <img src="./assets/potraits/nurosy_avatar.png">
+                            <img src="./assets/potraits/nurosy_avatar.png" alt = "nurosy avatar">
                         </div>
                         <div class = "contributor-info">
-                            <label class = "contributor-name">Nurosy</label>
+                            <h5 class = "contributor-name">Nurosy</h5>
                             <label class = "contributor-edits">2986 edits</label>
                         </div>
                     </div>
 
                     <div class="contributor-container">
                         <div class = "top-contributor-img profile-img">
-                            <img src="./assets/potraits/space_seal_avatar.png">
+                            <img src="./assets/potraits/space_seal_avatar.png" alt = "space_seal avatar">
                         </div>
                         <div class = "contributor-info">
-                            <label class = "contributor-name">space_seal</label>
+                            <h5 class = "contributor-name">space_seal</h5>
                             <label class = "contributor-edits">2714 edits</label>
                         </div>
                     </div>
                 </div>  
                 
-            </div>
-        </section>
+            </aside>
+        </div>
 
 
     </main>

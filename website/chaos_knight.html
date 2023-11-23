@@ -1,40 +1,46 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dota2 Wiki</title>
+    <title>Chaos Knight</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="hero-page-script.js"></script>
+    <script src="./javascript/hero-page-script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
 </head>
+<!-- Set background gradiant and load level 0 stats-->
 <body onload="showLevel('load','0')" style="background-image: linear-gradient(135deg, #260908 60%, #491916 150%);" class = "hero-body">
     <!-- Top nav bar -->
     <header>
-        <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
-       <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
+        <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png" class = logo alt = "Dota2 logo"></a>
+        <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
         <nav>
             <ul>
-                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html" class="active">Heroes</a></li>
-                <li><img src="assets/icons/info_icon.png" class = imga><a href = "#">Armory</a></li>
-                <li><img src="assets/icons/paper_icon.png" class = imga><a href = "./guides.html">Guides</a></li>
-                <li><img src="assets/icons/home_icon.png" class = imga><a href = "#">Community</a></li>
+                <li><img src="assets/icons/user_icon.png" class = imga alt = "user icon"><a href = "./heroes.html">Heroes</a></li>
+                <li><img src="assets/icons/info_icon.png" class = imga alt = "info icon"><a href = "#">Armory</a></li>
+                <li><img src="assets/icons/paper_icon.png" class = imga alt = "paper icon"><a href = "#">Guides</a></li>
+                <li><img src="assets/icons/home_icon.png" class = imga alt = "home icon"><a href = "#">Community</a></li>
             </ul>
         </nav>
+        <!-- replaces the checkbox with an label and a image-->
         <label for="nav-toggle" class = "nav-toggle-label">
-            <img src="assets/icons/hamburger_icon.png">
+            <img src="assets/icons/hamburger_icon.png" alt = "hamburger icon">
         </label>
     </header>
 
+    <!-- Use a flex column for main, since the content will be organised top to bottom-->
     <main class = "flex-column hero-main">
 
-        <!-- This section contains the heroe's stats, description, name and potrait -->
-        <section class = "stat-area">
+        <!-- This section contains the hero's stats, description, name and potrait -->
+        <div class = "stat-area">
             <div class = "stat-column">
-                <div class = "flex-column">
-                    <div style="display: flex;" id = "hero-heading">
-                        <label class="hero-title">Chaos Knight</label>
-                        <!-- Hero's roles -->
-                        <div class = "roles-row", style="width: 60%;">
+                <article class = "flex-column">
+                    <!-- Use a blank header-->
+                    <header class = "blank-header" style="display: flex;" id = "hero-heading">
+                        <!-- Hero's name-->
+                        <h1 class="hero-title">Chaos Knight</h1>
+                        <!-- Hero's roles, a flex row. Used in-line style to override default width -->
+                        <div class = "roles-row" style="width: 60%;">
                             <!-- Each role container is the role of the hero in the role's corresponding colour -->
                             <div class = "roles-container" style = "border-color: #de6b6b;">
                                 <label style = "color: #de6b6b;">Melee</label>
@@ -55,40 +61,48 @@
                                 <label style = "color: rgb(237, 233, 7);">Pusher</label>
                             </div> 
                         </div>
-                    </div>
-                    <label class = "hero-description">Chaos Knight is an army unto himself. Able to summon a cavalry of clones to demolish enemy defenses, should an enemy present itself, he can rift reality to pull him and his phantasms close enough to rain brutal cudgel blows upon their head.</label>
-                </div>
+                    </header>
+                    <!-- Hero Desciption-->
+                    <p class = "hero-description">Chaos Knight is an army unto himself. Able to summon a cavalry of clones to demolish enemy defenses, should an enemy present itself, he can rift reality to pull him and his phantasms close enough to rain brutal cudgel blows upon their head.</p>
+                </article>
+
                 <!-- Area on the hero's attribute stats -->
-                <div class = "full-container">
+                <!-- Full container defines the entire container area -->
+                <section class = "full-container">
                     <!-- Title area -->
+                    <!-- A sub container -->
                     <div class = "inner-area-top">
+                        <!-- Uses a flex column to vertically center title -->
                         <div class = "flex-column">
-                            <label class = "inner-area-title">Attribute Stats</label>
+                            <h3 class = "inner-area-title">Attribute Stats</h3>
                         </div>
                     </div>
+                    <!-- Content area -->
                     <div class = "attribute-row">
-                        <!-- Each attribute column includes the attribute image and value -->
+                        <!-- Each attribute column is a flex column, includes the attribute image and corresponding value -->
                         <div class = "attribute-column">
-                            <img class = "attribute-img" src="assets/icons/strength.png">
+                            <img class = "attribute-img" src="assets/icons/strength.png" alt = "strength icon">
                             <label>24 + 3.2</label> 
                         </div>
                         <div class = "attribute-column">
-                            <img class = "attribute-img" src="assets/icons/agility.png">
+                            <img class = "attribute-img" src="assets/icons/agility.png" alt = "agility icon">
                             <label>18 + 1.4</label> 
                         </div>
                         <div class = "attribute-column">
-                            <img class = "attribute-img" src="assets/icons/intelligence.png">
+                            <img class = "attribute-img" src="assets/icons/intelligence.png" alt = "intelligence icon">
                             <label>18 + 1.2</label> 
                         </div>
                     </div>   
-                </div>
-                <!-- Area for the hero's level stats -->
-                <div class = "full-container">
-                    <div class = "inner-area-top">
-                        <div class = "flex-column", style="width: 100%;">
+                </section>
 
+                <!-- Area for the hero's level stats -->
+                <section class = "full-container">
+                    <div class = "inner-area-top">
+                        <!-- flex column to vertically order title and level-row-->
+                        <div class = "flex-column" style="width: 100%;">
+                            <h3 class = "inner-area-title">Level Stats</h3>
                             <!-- Tab bar to toggle between different hero levels -->
-                            <label class = "inner-area-title">Level Stats</label>
+                            <!-- flex row for the different tab buttons-->
                             <div class = "level-row" id = "level-row">
                                 <button onclick="showLevel(event, '0')" class="active">0</button> <!--set 0 as default active-->
                                 <button onclick="showLevel(event, '1')">1</button>
@@ -98,24 +112,28 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Content area. It is flex columns (attribute-column) within a flex row (level-stat-row) -->
                     <div class = "level-stat-row">
-                        <!-- Each attribute column includes the level stat image, label and value -->
+                        <!-- Each attribute column is a flex column with a flex row within. It contains the stat name + icon, with the value below it -->
                         <div class = "attribute-column">
-                            <div class = "img-text">
+                            <!-- A flex row to lay the image and text side by side-->
+                            <figure class = "img-text">
                                 <img src="assets/icons/stat_atk.png">
-                                <label>Damage</label>
-                            </div>
-                            <label class = "tab-content 0">29-59</label>
-                            <label class = "tab-content 1">53-83</label>
-                            <label class = "tab-content 15">97-127</label>
-                            <label class = "tab-content 25">141-171</label>
-                            <label class = "tab-content 30">159-189</label>
+                                <figcaption>Damage</figcaption>
+                            </figure>
+                             <!-- Values of stats-->
+                             <!-- Content for the different tabs. The second class determines which tab the labels are for-->
+                             <label class = "tab-content 0">29-59</label>
+                             <label class = "tab-content 1">53-83</label>
+                             <label class = "tab-content 15">97-127</label>
+                             <label class = "tab-content 25">141-171</label>
+                             <label class = "tab-content 30">159-189</label>
                         </div> 
                         <div class = "attribute-column">
-                            <div class = "img-text">
+                            <figure class = "img-text">
                                 <img src="assets/icons/stat_hp.png">
-                                <label>Health</label>
-                            </div>
+                                <figcaption>Health</figcaption>
+                            </figure>
                             <label class = "tab-content 0">120 (+0.25)</label>
                             <label class = "tab-content 1">648 (+2.65)</label>
                             <label class = "tab-content 15">1616 (+7.13)</label>
@@ -123,10 +141,10 @@
                             <label class = "tab-content 30">2980 (+13.33)</label>
                         </div> 
                         <div class = "attribute-column">
-                            <div class = "img-text">
+                            <figure class = "img-text">
                                 <img src="assets/icons/stat_def.png">
-                                <label>Armor</label>
-                            </div>
+                                <figcaption>Armor</figcaption>
+                            </figure>
                             <label class = "tab-content 0">2</label>
                             <label class = "tab-content 1">5</label>
                             <label class = "tab-content 15">8.27</label>
@@ -134,10 +152,10 @@
                             <label class = "tab-content 30">14.1</label>
                         </div> 
                         <div class = "attribute-column">
-                            <div class = "img-text">
+                            <figure class = "img-text">
                                 <img src="assets/icons/stat_effectres.png">
-                                <label>Magic Resist</label>
-                            </div>
+                                <figcaption>Magic Resist</figcaption>
+                            </figure>
                             <label class = "tab-content 0">25%</label>
                             <label class = "tab-content 1">26.8%</label>
                             <label class = "tab-content 15">28.48%</label>
@@ -145,10 +163,10 @@
                             <label class = "tab-content 30">31.68%</label>
                         </div> 
                         <div class = "attribute-column">
-                            <div class = "img-text">
+                            <figure class = "img-text">
                                 <img src="assets/icons/stat_mana.png">
-                                <label>Mana</label>
-                            </div>
+                                <figcaption>Mana</figcaption>
+                            </figure>
                             <label class = "tab-content 0">75 (+0)</label>
                             <label class = "tab-content 1">291 (+0.9)</label>
                             <label class = "tab-content 15">483 (+1.74)</label>
@@ -156,13 +174,16 @@
                             <label class = "tab-content 30">867 (+3.34)</label>
                         </div> 
                     </div>   
-                </div>
+                </section>
             </div>
+
             <!-- Area for the hero's potrait and other base stats -->
-            <div class = "right-container">
-                <img src="assets/potraits/chaos_knight.png">
+            <aside class = "right-container">
+                <!-- Hero image -->
+                <img src="assets/potraits/chaos_knight.png" alt = "chaos knight portrait">
+                <!-- This is a flex row with two flex columns inside it to have both columns side by side-->
                 <div class = "inner-area-bottom">
-                    <!-- Label for stats -->
+                    <!-- Label for stats, in a column -->
                     <div class = "flex-column">
                         <label class = "medium-24" style="color: #838383;">Attribute</label>
                         <label class = "medium-24" style="color: #838383;">Attack Range</label>
@@ -171,7 +192,7 @@
                         <label class = "medium-24" style="color: #838383;">Move Speed</label>
                         <label class = "medium-24" style="color: #838383;">Vision Range</label>
                     </div>
-                    <!-- Corresponding stat values -->
+                    <!-- Corresponding stat values in another column -->
                     <div class = "flex-column base-stats-spacing">
                         <label class = "medium-24" style="color: white;">Strength</label>
                         <label class = "medium-24" style="color: white;">150</label>
@@ -181,30 +202,29 @@
                         <label class = "medium-24" style="color: white;">1800 (800)</label>
                     </div>
                 </div>
-            </div>
-
-
-            <div>
-        </section>
+            </aside>
+        </div>
         
-        <!-- This section shows the hero's skills -->
-        <section class = "full-container", style="margin-top: 5vw;">
-            <!-- Title area -->
+        <!-- This section shows the hero's skills in a table form -->
+        <section class = "full-container" style="margin-top: 5vw;">
+            <!-- Title area, a sub container -->
             <div class = "inner-area-top">
+                <!-- Flex column is used to vertically align the title-->
                 <div class = "flex-column">
-                    <label class = "inner-area-title">Skills</label>
+                    <h3 class = "inner-area-title">Skills</h3>
                 </div>
             </div>
-
+            <!-- The table is done row by row, with a top border for rows as table lines  -->
             <!-- skill-row contains the information for 1 skill - skill icon image, name, description and other details -->
             <div class = "skill-row">
-                <div class = "skill-name">
+                <!--Left side of the table in a flex row - skill name + icon -->
+                <figure class = "skill-name">
                     <img src="assets/skills/chaos_knight_chaos_bolt.png">
-                    <label>Chaos Bolt</label>
-                </div>
-
+                    <figcaption>Chaos Bolt</figcaption>
+                </figure>
+                <!-- Right side of the table in a flex column - skill description + details -->
                 <div class = "skill-description">
-                    <label class = "skill-description-title">Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage.</label>
+                    <p class = "skill-description-title">Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage.</p>
                     <label class = "skill-description-detail">Min Damage: 90/120/150/180</label>
                     <label class = "skill-description-detail">Max Damage: 150/210/270/330</label>
                     <label class = "skill-description-detail">Cast Range: 500</label>
@@ -213,15 +233,15 @@
                 </div>
             </div>
             
-            <!-- top-border class is for every row except the first one to complete the table -->
+            <!-- top-border class adds a border, meant for every skill-row except the first one to complete the table -->
             <div class = "skill-row top-border">
-                <div class = "skill-name">
+                <figure class = "skill-name">
                     <img src="assets/skills/chaos_knight_reality_rift.png">
-                    <label>Reality Rift</label>
-                </div>
+                    <figcaption>Reality Rift</figcaption>
+                </figure>
 
                 <div class = "skill-description">
-                    <label class = "skill-description-title">Teleports you, any images you have and the target unit to a point along the line between the two of you. Reduces armor of the enemy unit for 6 seconds.</label>
+                    <p class = "skill-description-title">Teleports you, any images you have and the target unit to a point along the line between the two of you. Reduces armor of the enemy unit for 6 seconds.</p>
                     <label class = "skill-description-detail">Cast Range: 550/600/650/750</label>
                     <label class = "skill-description-detail">Illusion Search Radius: 1375</label>
                     <label class = "skill-description-detail">Target Pull Distance: 250/300/350/400</label>
@@ -230,13 +250,13 @@
             </div>
 
             <div class = "skill-row top-border">
-                <div class = "skill-name">
+                <figure class = "skill-name">
                     <img src="assets/skills/chaos_knight_chaos_strike.png">
-                    <label>Chaos Strike</label>
-                </div>
+                    <figcaption>Chaos Strike</figcaption>
+                </figure>
 
                 <div class = "skill-description">
-                    <label class = "skill-description-title">Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage. Deals 1.9x damage to creeps.</label>
+                    <p class = "skill-description-title">Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage. Deals 1.9x damage to creeps.</p>
                     <label class = "skill-description-detail">Proc Chance: 33.33%</label>
                     <label class = "skill-description-detail">Min Critical Damage: 125%</label>
                     <label class = "skill-description-detail">Max Critical Damage: 140/175/210/245</label>
@@ -245,52 +265,53 @@
                     <label class = "skill-description-detail">Creep Lifesteal Multiplier: 0.6</label>
                 </div>
             </div>
-            
+
             <div class = "skill-row top-border">
-                <div class = "skill-name">
+                <figure class = "skill-name">
                     <img src="assets/skills/chaos_knight_phantasm.png">
-                    <label>Phantasm</label>
-                </div>
+                    <figcaption>Chaos Strike</figcaption>
+                </figure>
 
                 <div class = "skill-description">
-                    <label class = "skill-description-title">Summons several phantasmal copies of the Chaos Knight from alternate dimensions. The phantasms are strong illusions that deal damage, but take damage.</label>
+                    <p class = "skill-description-title">Summons several phantasmal copies of the Chaos Knight from alternate dimensions. The phantasms are strong illusions that deal damage, but take damage.</p>
                     <label class = "skill-description-detail">Number of Illusions: 1/2/3</label>
                     <label class = "skill-description-detail">Duration: 30</label>
                     <label class = "skill-description-detail">Damage Taken: 325%</label>
                     <label class = "skill-description-detail">Damage Dealt: 100%</label>
                 </div>
             </div>
+        
         </section>
 
-        <!-- This section shows the hero's talents -->
-        <section class = "full-container", style="margin-top: 5vw; margin-bottom: 3vw;">
+        <!-- This section shows the hero's talents in a table format -->
+        <section class = "full-container" style="margin-top: 5vw; margin-bottom: 3vw;">
             <!-- Title area -->
             <div class = "inner-area-top">
                 <div class = "flex-column">
                     <label class = "inner-area-title">Talents</label>
                 </div>
             </div>
-            
+            <!-- The table is done row by row, with a top border for rows as table lines  -->
             <!-- talent-row is formatted as (description | level | description) -->
             <div class = "talent-row">
                 <label class = "talent-description">+10s Phantasm Duration</label>
-                <label class = "talent-level">25</label>
+                <h4 class = "talent-level">25</h4>
                 <label class = "talent-description">+10% Chaos Strike Chance</label>
             </div>
             <!-- top-border class is for every row except the first one to complete the table -->
             <div class = "talent-row top-border">
                 <label class = "talent-description">Reality Rift Pierces Debuff Immunity</label>
-                <label class = "talent-level">20</label>
+                <h4 class = "talent-level">20</h4>
                 <label class = "talent-description">+0.6 Min/Max Chaos Bolt Duration</label>
             </div>
             <div class = "talent-row top-border">
                 <label class = "talent-description">-100% Phantasm Illusion Incoming Damage</label>
-                <label class = "talent-level">15</label>
+                <h4 class = "talent-level">15</h4>
                 <label class = "talent-description">-3s Chaos Bolt Cooldown</label>
             </div>
             <div class = "talent-row top-border">
                 <label class = "talent-description">+225 Reality Rift Pull Distance</label>
-                <label class = "talent-level">10</label>
+                <h4 class = "talent-level">10</h4>
                 <label class = "talent-description">+35%  Chaos Strike Lifesteal</label>
             </div>
         </section>

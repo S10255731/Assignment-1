@@ -14,7 +14,7 @@ The three pages of drow ranger, bane and chaos knight will be categorised and re
  
 The goal of the design was to make a minimalistic wiki with organised content. I also wanted to keep the colour scheme and design elements similar to the main website. Despite the design of the official website and unofficial wiki, I wanted to go for a "softer look", with rounded corners, curlier fonts, etc. I found that this style of website worked best at making wikis that were both organised and aesthetic, although the inheritely dull assets of Dota2 still kept the website to a similar feel as the others. 
 
-##### The home page serves as the introductory page for the website. I decided to include recent game patches, upcoming content., recently changed pages and trending guides. The top contributor list serves as a way to recognise users who actively contribute to the website, although it is a unncessary feature and thus removed in the mobile version of the website due to its awkwardness.
+##### The home page serves as the introductory page for the website. I decided to include recent game patches, upcoming content., recently changed pages and trending guides. The top contributor list serves as a way to recognise users who actively contribute to the website.
 
 - As a new user, I want to know what this website is about.
 - As a returning user, I want to quickly find any recent updates to the game so I can stay up to date. I also want to know any new trends with the game.

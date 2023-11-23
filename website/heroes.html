@@ -1,28 +1,30 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Dota2 Wiki</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="heroes-script.js"></script>
+    <meta charset="UTF-8">
+    <script src="./javascript/heroes-script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body onLoad="load();"> <!-- Run javascript functions -->
 
     <!-- Top Nav bar -->
     <header>
-        <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png", class = logo></a>
-       <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
+        <a href = "./index.html" class = logo><img src="assets/icons/dota2_logo.png" class = logo alt = "Dota2 logo"></a>
+        <input type="checkbox" id = "nav-toggle" class = "nav-toggle">
         <nav>
             <ul>
-                <li><img src="assets/icons/user_icon.png" class = imga><a href = "./heroes.html" class="active">Heroes</a></li>
-                <li><img src="assets/icons/info_icon.png" class = imga><a href = "#">Armory</a></li>
-                <li><img src="assets/icons/paper_icon.png" class = imga><a href = "./guides.html">Guides</a></li>
-                <li><img src="assets/icons/home_icon.png" class = imga><a href = "#">Community</a></li>
+                <li><img src="assets/icons/user_icon.png" class = imga alt = "user icon"><a href = "./heroes.html">Heroes</a></li>
+                <li><img src="assets/icons/info_icon.png" class = imga alt = "info icon"><a href = "#">Armory</a></li>
+                <li><img src="assets/icons/paper_icon.png" class = imga alt = "paper icon"><a href = "#">Guides</a></li>
+                <li><img src="assets/icons/home_icon.png" class = imga alt = "home icon"><a href = "#">Community</a></li>
             </ul>
         </nav>
+        <!-- replaces the checkbox with an label and a image-->
         <label for="nav-toggle" class = "nav-toggle-label">
-            <img src="assets/icons/hamburger_icon.png">
+            <img src="assets/icons/hamburger_icon.png" alt = "hamburger icon">
         </label>
     </header>
 
@@ -32,107 +34,112 @@
         <section class = "other-dashboard">
             <picture>
                 <source media="(max-width: 700px)" srcset="assets/background/radiant_dire_mobile.png">
-                <img src="assets/background/radiant_dire_smaller.png" class = "other-background-img"/> 
+                <img src="assets/background/radiant_dire_smaller.png" class = "other-background-img" alt = "background image"> 
             </picture>
-            <label class = "side-small-title"><span style="color: #BB242A;">Dota2</span> Hero List</label>
-            <label class = "side-small-subtitle">From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory.</label>
+            <h1 class = "side-small-title"><span style="color: #BB242A;">Dota2</span> Hero List</h1>
+            <h2 class = "side-small-subtitle">From magical tacticians to fierce brutes and cunning rogues, Dota 2's hero pool is massive and limitlessly diverse. Unleash incredible abilities and devastating ultimates on your way to victory.</h2>
         </section>
 
-        <section>
-            <label class = "other-heading">Heroes</label>
-                <div class = "filter-area">
-                <!-- Buttons to filter out heroes based on attribute -->
-                    <div class = "attribute-button-area" id = "attribute-button-area">
+        <h3 class = "other-heading">Heroes</h3>
+        <!--Attribute filter + search bar-->
+        <div class = "filter-area">
+        <!-- Buttons to filter out heroes based on attribute, in a flex row -->
+            <div class = "attribute-button-area" id = "attribute-button-area">
 
-                        <!-- Each attribute-button has an attribute and corresponding image, triggers the sorting function when clicked -->
-                        <button class = "attribute-button active" style="border-color: white;" onclick="attributeFilter('')">
-                            <img src="assets/icons/all.png">
-                        </button>
-                        <button class = "attribute-button" style="border-color: red;" onclick="attributeFilter('strength')">
-                            <img src="assets/icons/strength.png">
-                        </button>
-                        <button class = "attribute-button" style="border-color: green;" onclick="attributeFilter('agility')">
-                            <img src="assets/icons/agility.png">
-                        </button>
-                        <button class = "attribute-button" style="border-color: #08D4EA;" onclick="attributeFilter('intelligence')">
-                            <img src="assets/icons/intelligence.png">
-                        </button>
-                        <button class = "attribute-button" style="border-color: white" onclick="attributeFilter('universal')">
-                            <img src="assets/icons/universal.png">
-                        </button>
-                    </div>  
-                    <!-- Search bar -->
-                    <input type="text" id="search-bar" onkeyup="search()" placeholder="Search for heroes.." title="Type in a name">
-                </div>
-                <div class = "role-filter-area", id = "role-button-area">
-                    <button class = "role-button" style="border-color: #5EDF7B;" onclick="roleFilter('carry')" id = "carry">
-                        <label style = "color: #5EDF7B;">Carry</label>
-                    </button>
-                    <button class = "role-button" style="border-color: #9D9D9D;" onclick="roleFilter('disabler')" id = "disabler">
-                        <label style = "color: #9D9D9D;">Disabler</label>
-                    </button>
-                    <button class = "role-button" style="border-color: #F2A430;" onclick="roleFilter('durable')" id = "durable">
-                        <label style = "color: #F2A430;">Durable</label>
-                    </button>
-                    <button class = "role-button" style="border-color: #ff8400;" onclick="roleFilter('initiator')" id = "initiator">
-                        <label style = "color: #ff8400;">Initiator</label>
-                    </button>
-                    <button class = "role-button" style="border-color: rgb(237, 233, 7);" onclick="roleFilter('pusher')" id = "pusher">
-                        <label style = "color: rgb(237, 233, 7);">Pusher</label>
-                    </button>
-                    <button class = "role-button" style="border-color: #ca5edf;" onclick="roleFilter('support')" id = "support">
-                        <label style = "color: #ca5edf;">Support</label>
-                    </button>
-                    <button class = "role-button" style="border-color: #f23030;" onclick="roleFilter('nuker')" id = "nuker">
-                        <label style = "color: #f23030;">Nuker</label>
-                    </button>
-                    <button class = "role-button" style="border-color: #30e2f2;" onclick="roleFilter('escape')" id = "escape">
-                        <label style = "color: #30e2f2;">Escape</label>
-                    </button>
-                    
-                </div>
-                <!-- Thumbnails for each hero. Contains an image of the hero and corresponding name -->
-                <div class = "heroes-area" id = "heroes-area" style="margin-top: 5vw;">
-                    <!-- Each hero display has a black gradient on the thumbnail of hero, with its name on the bottom -->
-                    <a href = "./bane.html" class = "heroes universal disabler durable nuker support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/bane.png);">
-                        <label>Bane</label>
-                    </a>
-                    <a href = "./chaos_knight.html" class = "heroes strength carry disabler durable initiator pusher" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/chaos_knight.png);">
-                        <label>Chaos Knight</label>
-                    </a>
-                    <a href = "./drow_ranger.html" class = "heroes agility carry disabler pusher" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/drow_ranger.png);">
-                        <label>Drow Ranger</label>
-                    </a>
-                    <a href = "#" class = "heroes intelligence carry disabler nuker support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lina.png);">
-                        <label>Lina</label>
-                    </a>
-                    <a href = "#" class = "heroes intelligence disabler initiator nuker support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lion.png);">
-                        <label>Lion</label>
-                    </a>
-                    <a href = "#" class = "heroes intelligence carry disabler nuker" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/muerta.png);">
-                        <label>Muerta</label>
-                    </a>
-                    <a href = "#" class = "heroes agility carry escape" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phantom_assassin.png);">
-                        <label>Phantom Assassin</label>
-                    </a>
-                    <a href = "#" class = "heroes universal disabler escape initiator nuker support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phoenix.png);">
-                        <label>Phoenix</label>
-                    </a>
-                    <a href = "#" class = "heroes strength disabler durable initiator" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/primal_beast.png);">
-                        <label>Primal Beast</label>
-                    </a>
-                    <a href = "#" class = "heroes agility carry durable escape" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/spectre.png);">
-                        <label>Spectre</label>
-                    </a>
-                    <a href = "#" class = "heroes universal disabler durable nuker pusher support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/visage.png);">
-                        <label>Visage</label>
-                    </a>
-                    <a href = "#" class = "heroes intelligence disabler initiator support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/warlock.png);">
-                        <label>Warlock</label>
-                    </a>
-                </div>
+                <!-- Each attribute-button has an attribute and corresponding image, triggers the filter function when clicked -->
+                <button class = "attribute-button active" style="border-color: white;" onclick="attributeFilter('')">
+                    <img src="assets/icons/all.png" alt = "all">
+                </button>
+                <button class = "attribute-button" style="border-color: red;" onclick="attributeFilter('strength')">
+                    <img src="assets/icons/strength.png" alt = "strength">
+                </button>
+                <button class = "attribute-button" style="border-color: green;" onclick="attributeFilter('agility')">
+                    <img src="assets/icons/agility.png" alt = "agility">
+                </button>
+                <button class = "attribute-button" style="border-color: #08D4EA;" onclick="attributeFilter('intelligence')">
+                    <img src="assets/icons/intelligence.png" alt = "intelligence">
+                </button>
+                <button class = "attribute-button" style="border-color: white" onclick="attributeFilter('universal')">
+                    <img src="assets/icons/universal.png" alt = "universal">
+                </button>
+            </div>  
+            <!-- Search bar -->
+            <!-- when text is entered, call javascript function to filter-->
+            <input type="text" id="search-bar" onkeyup="search()" placeholder="Search for heroes.." title="Type in a name">
+        </div>
+
+        <!-- role filter, a flex row -->
+        <div class = "role-filter-area" id = "role-button-area">
+            <!-- each button has a border around it with the corresponding role text, different colours for each -->
+            <!-- when button is clicked, call javascript function to filter-->
+            <button class = "role-button" style="border-color: #5EDF7B; color: #5EDF7B;" onclick="roleFilter('carry')" id = "carry">Carry</button>
+            <button class = "role-button" style="border-color: #9D9D9D; color: #9D9D9D;" onclick="roleFilter('disabler')" id = "disabler">Disabler</button>
+            <button class = "role-button" style="border-color: #F2A430; color: #F2A430;" onclick="roleFilter('durable')" id = "durable">Durable</button>
+            <button class = "role-button" style="border-color: #ff8400; color: #ff8400;" onclick="roleFilter('initiator')" id = "initiator">Initiator</button>
+            <button class = "role-button" style="border-color: rgb(237, 233, 7); color: rgb(237, 233, 7);" onclick="roleFilter('pusher')" id = "pusher">Pusher</button>
+            <button class = "role-button" style="border-color: #ca5edf; color: #ca5edf;" onclick="roleFilter('support')" id = "support">Support</button>
+            <button class = "role-button" style="border-color: #f23030; color: #f23030;" onclick="roleFilter('nuker')" id = "nuker">Nuker</button>
+            <button class = "role-button" style="border-color: #30e2f2; color: #30e2f2;" onclick="roleFilter('escape')" id = "escape">Escape</button>
+            
+        </div>
+        <!-- A flex area for displaying heroes -->
+        <div class = "heroes-area" id = "heroes-area" style="margin-top: 5vw;">
+             <!-- Thumbnails for each hero. Contains an image of the hero and corresponding name -->
+            <!-- Each hero display has a black gradient on the thumbnail of hero, with its name on the bottom -->
+            <div class = "heroes universal disabler durable nuker support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/bane.png);">
+                <!-- Interesting problem I faced here. Initially, the div was an anchor. However, the W3C validator throws an error for labels in anchors  -->
+                <!-- However, I am forced to use labels in anchors, as the anchor has a padding to match the aspect ratio of the background image -->
+                <!-- Using the text directly into the anchor would affect the height of the anchor due to said padding-->
+                <!-- The workaround was to change the anchor to a div and move the anchor into the div and stretch it to fill the area-->
+                <!-- There probably is a better way to do this, but this ugly method is the best way I can think of right now-->
+                <a href = "./bane.html"></a>
+                <label>Bane</label>
+            </div>
+            <div class = "heroes strength carry disabler durable initiator pusher" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/chaos_knight.png);">
+                <a href = "./chaos_knight.html"></a>
+                <label>Chaos Knight</label>
+            </div>
+            <div class = "heroes agility carry disabler pusher" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/drow_ranger.png);">
+                <a href = "./drow_ranger.html"></a>
+                <label>Drow Ranger</label>
+            </div>
+            <div class = "heroes intelligence carry disabler nuker support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lina.png);">
+                <a href = "#"></a>
+                <label>Lina</label>
+            </div>
+            <div class = "heroes intelligence disabler initiator nuker support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/lion.png);">
+                <a href = "#"></a>
+                <label>Lion</label>
+            </div>
+            <div class = "heroes intelligence carry disabler nuker" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/muerta.png);">
+                <a href = "#"></a>
+                <label>Muerta</label>
+            </div>
+            <div class = "heroes agility carry escape" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phantom_assassin.png);">
+                <a href = "#"></a>
+                <label>Phantom Assassin</label>
+            </div>
+            <div class = "heroes universal disabler escape initiator nuker support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/phoenix.png);">
+                <a href = "#"></a>
+                <label>Phoenix</label>
+            </div>
+            <div class = "heroes strength disabler durable initiator" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/primal_beast.png);">
+                <a href = "#"></a>
+                <label>Primal Beast</label>
+            </div>
+            <div class = "heroes agility carry durable escape" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/spectre.png);">
+                <a href = "#"></a>
+                <label>Spectre</label>
+            </div>
+            <div class = "heroes universal disabler durable nuker pusher support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/visage.png);">
+                <label>Visage</label>
+            </div>
+            <div class = "heroes intelligence disabler initiator support" style="background-image: linear-gradient(rgba(0, 0, 0, 0.10) 39.93%, rgba(0, 0, 0, 0.94) 96.48%), url(./assets/thumbnails/warlock.png);">
+                <a href = "#"></a>
+                <label>Warlock</label>
+            </div>
+        </div>
                 
-        </section>
 
 
     </main>
