@@ -589,6 +589,22 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     height: 0.05vw;
     background: #626262;
 }
+
+/* scroll transitions */
+/* to be used with another class to apply transition on container */
+/* the transition is a fade-in + move up when the container is scrolled to*/
+.reveal{
+    transform: translateY(60px); /*move down */
+    opacity: 0; /* hide */
+    transition: 0.9s all ease;
+  }
+
+/* to be applied onto the reveal classes to execute the transitions*/
+.reveal.active{
+transform: translateY(0); /* set to intended position */
+opacity: 1;
+}
+
 /*mobile layout for home screen */
 /* Increased font sizes*/
 @media screen and (max-width: 700px){
@@ -680,6 +696,9 @@ z-index: 99; /* Makes sure the post is on top of other posts */
     .contributor-edits{
         font-size: 1.8vw;
     }
+
+    /* enable scroll transitions only on mobile*/
+
 }
 
 .other-dashboard{

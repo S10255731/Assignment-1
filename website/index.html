@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="./javascript/scroll-transition.js"></script>
 </head>
 <body class = "home-body">
 
@@ -64,7 +65,8 @@
             <!--Contains content on the left side-->
             <div class = "other-content-main" >
                 <!-- Section for upcoming content posts. Similar to recent patches -->
-                <section class = "other-content" >
+                 <!-- the reveal class indicates that the container will have the scroll transition-->
+                <section class = "other-content reveal" >
                     <h3 class = "home-heading">Upcoming Content</h3>
                     <div class = "red-line"></div>
                     <figure class = "content-area">
@@ -76,7 +78,7 @@
                     </figure>
                 </section>
                 <!-- Section for recently updated-->
-                <section class = "other-content">
+                <section class = "other-content reveal">
                     <h3 class = "home-heading">Recently Updated</h3>
                     <div class = "red-line"></div>
                     <div class = "content-area">
@@ -112,7 +114,7 @@
                     </div>
                 </section>
                 <!-- Section for trending guides-->
-                <section class = "other-content">
+                <section class = "other-content reveal">
                     <h3 class = "home-heading">Trending Guides</h3>
                     <div class = "red-line" style = "margin-bottom:2vw;"></div>
                     <!-- Use a column flex box to list guides vertically-->
@@ -198,7 +200,7 @@
                 </section>
             </div>
             <!-- Side bar, top contributors section-->
-            <aside class = "other-content-side" >
+            <aside class = "other-content-side reveal" >
                 <!-- used div instead of heading so that it's width fully matches the parent's width-->
                 <div class = "contributor-title">Top Contributors</div>
                 <div class = "red-line"></div>
