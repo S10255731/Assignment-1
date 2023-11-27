@@ -2,9 +2,7 @@
 
 This website is an official wiki for Dota2. Dota2 is a multiplayer online battle arena (MOBA) game by valve, and is the sequel to its predecessor Dota. This website serves to document information about the game, including game mechanics, updates, characters and more. It aims to allow players to have convenient access to information about the game and community-made content. 
 
-Currently, the [official dota2](https://www.dota2.com/home) website only contains information about the hereoes, and the [unofficial dota2 wiki](https://dota2.fandom.com/wiki/Dota_2_Wiki) is under maintained and lacking in its user experience. This is because the unofficial wiki is built on fandom, which limits the design options. Hence, this website aims to replace the unofficial wiki and supplement the main website for in-game information. Being an official website, it is expected to be managed by Valve itself, which ensures that its content is accurate and up to date. It also comes with improvements to user-experience, such as more flexible designs and a notable lack of advertisments, which plagues the unofficial wiki.
-
-This website will be managed by both the community and the company. Users can apply to be a contributor, which gives them permission to edit articles and post guides. Moderators will be from Valve itself, making sure information is up-to-date and relevant, while guides are up to standards.
+Currently, the [official dota2](https://www.dota2.com/home) website only contains information about the hereoes, and the [unofficial dota2 wiki](https://dota2.fandom.com/wiki/Dota_2_Wiki) is under maintained and lacking in its user experience. Hence, this website aims to replace the unofficial wiki and supplement the main website for in-game information. Being an official website, it is expected to be managed by Valve itself, which ensures that its content is accurate and up to date. This website will be managed by both the community and the company. Users can apply to be a contributor, which gives them permission to edit articles and post guides. Moderators will be from Valve itself, making sure information is up-to-date and relevant, while guides are up to standards.
 
 ## Notes for this README
 
@@ -19,12 +17,18 @@ The goal of the design was to make a minimalistic wiki with organised content. I
 - As a new user, I want to know what this website is about.
 - As a returning user, I want to quickly find any recent updates to the game so I can stay up to date. I also want to know any new trends with the game.
 
+I used an image as the background to make the page more vibrant, and drop shadows for the different section containers to make them stand out more against the background
+
 
 ##### The heroes page is as a list of all the heroes in the game for users to navigate to. I decided on having a list of heroes as well as filters.
 - As a user who is unfamiliar with the website, I want to easily be able to search and filter heroes to easily find them
 
-##### For the hero information page, I decided on using a table-style design. This makes the content more organised.
+The filters were layed out to take up the available horizontal area to make it easier to view in one look. Roles have different colours associated with them to add a visual difference between them. The heroes were arranged in a grid format as it is compact and organised
+
+##### For the hero information page, it contains the hero's name, stats, skills, talents and an image
 - As a user who is curious about the hero's information, I want to be able to quickly locate different sections of information in an easy-to-understand manner.
+
+I decided on using a table-style design. This makes the content more organised. The background colour also depends on the primary colours of the hero itself, and theres a slight gradiant to it. This makes the page more colourful
 
 
 ### Wireframes
