@@ -43,13 +43,13 @@ I decided on using a table-style design. This makes the content more organised. 
 - Feature 1 - allows users to easily find the hero, by implementing a filter and search system
 - Feature 2 - allow users to conveniently navigate to different main sections of the website, using a top navigation bar
 - Feature 3 - allow users to view the stats for heroes at different levels, using a tab
+- Feature 4 - navigation bar changes based on mobile/desktop view
 
 
 ### Features Left to Implement
 
 #### Home page
-Add new pages for the different patches to link to
-Add scroll transitions
+ - Add new pages for the recent updates/recent updates/trending guides/ to link to
 #### Heroes Page
 - Additional filter for heroes based on complexity (each hero has a complexity value from 1-3, indicating its difficulty to use)
 - Add the remaining heroes to the heros page
@@ -88,6 +88,7 @@ Add scroll transitions
     3. The value of the stats in that section should change accordingly
 
 ### Bugs
+
     1. The use of @media and vw unit means that the website does not work well on old browsers. Tested with internet explorer.
     2. The website does not work well with browsers' built-in zoom feature. (It does not actually zoom in). I am unsure what the cause is, however I believe it is caused by the use of % and vw as units for almost all elements
 
